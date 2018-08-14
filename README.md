@@ -1,3 +1,3 @@
-# slideorama.js
+# python-slides
 
-Slides in 70 lines of JavaScript.
+Slides for python HT18 LP1, based on [slideorama.js](https://github.com/emilfolino/slideorama).

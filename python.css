@@ -14,16 +14,19 @@ html {
 h1 {
     font-size: 3em;
     font-family: 'Oswald', sans-serif;
+    font-style: normal;
 }
 
 h2 {
     font-size: 2.4em;
     font-family: 'Oswald', sans-serif;
+    font-style: normal;
 }
 
 h3 {
     font-size: 2.0em;
     font-family: 'Oswald', sans-serif;
+    font-style: normal;
 }
 
 p {
@@ -82,4 +85,9 @@ pre {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 4rem auto;
 }

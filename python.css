@@ -72,6 +72,52 @@ h1 {
     }
 }
 
+@keyframes pulsate-color {
+    0% {
+        color: #0074d9;
+    }
+
+    10% {
+        color: #7fdbff;
+    }
+
+    20% {
+        color: #39cccc;
+    }
+
+    30% {
+        color: #2ecc40;
+    }
+
+    40% {
+        color: #01ff70;
+    }
+
+    50% {
+        color: #ffdc00;
+    }
+
+    60% {
+        color: #ff851b;
+    }
+
+    70% {
+        color: #ff4136;
+    }
+
+    80% {
+        color: #f012be;
+    }
+
+    90% {
+        color: #b10dc9;
+    }
+
+    100% {
+        color: #0074d9;
+    }
+}
+
 @keyframes pulsate-bg {
     0% {
         background-color: #2c3539;
@@ -160,8 +206,10 @@ pre {
 .timer {
     font-size: 5em;
     position: absolute;
+    color: #0074d9;
     bottom: 0;
     right: 0;
+    animation: pulsate-color 60s linear infinite;
 }
 
 .container {

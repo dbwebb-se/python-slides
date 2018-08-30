@@ -159,6 +159,12 @@ pre {
     font-family: 'Roboto Mono', monospace;
 }
 
+code {
+    background-color: #ccc;
+    color: #333;
+    padding: 0 0.4rem;
+}
+
 pre {
     background-color: #ccc;
     border-left: 0.5rem solid #0074d9;

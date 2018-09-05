@@ -239,3 +239,7 @@ td p {
 li {
     font-size: 2em;
 }
+
+.no_decorator li {
+    list-style-type: none;
+}

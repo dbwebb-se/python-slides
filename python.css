@@ -213,7 +213,7 @@ pre {
     font-size: 5em;
     position: absolute;
     color: #0074d9;
-    bottom: 0;
+    top: 0;
     right: 0;
     animation: pulsate-color 60s linear infinite;
 }

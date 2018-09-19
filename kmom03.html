@@ -18,10 +18,38 @@
         </div>
 
         <div class="slide">
-            <h1>Funktions syntax</h1>
+            <h1>Funktion syntax</h1>
             <pre><code>def NAME( LIST OF PARAMETERS ):
     STATEMENTS</code></pre>
         </div>
+
+        <div class="slide">
+            <h1>Funktion-uppgift</h1>
+            <div data-time="08:00" class="timer"></div>
+
+            <pre style="display:inline-block; width: 20%"><code>def f1():
+    pass
+
+def f2():
+    f4()
+
+def f3():
+    f2()
+    f1()
+
+def f4():
+    pass
+
+f3()</code></pre>
+        <div style="display:inline-block;width: 70%;vertical-align: top;"><p>Skriv av koden och ta bort <code>pass</code> från f1 och f4.</p>
+            <p>Lägg till så att varje funktion ska innehålla ett <code>print()</code> anrop som skriver ut en av siffrorna 1,2,3 eller 4. Lägg till det i rätt funktion så att det skrivs ut i ordningen: </p><pre>1
+2
+3
+4</pre>
+        </div>
+        </div>
+
+
 
         <div class="slide fade-in">
             <h1>Argument / Parametrar</h1>
@@ -37,6 +65,28 @@
             <p>Funktionen ska ta emot 3 argument: färg, smak, antal lager. Alla argument ska ha ett förifylld värde.</p>
 
             <p>Anropa sedan funktionen med 0, 1, 2 och 3 argument samt med bara sista argumentet med hjälp av <code>argument=värde</code></p>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Funktioner med return</h1>
+
+        </div>
+        <div class="slide fade-in">
+            <h1>Funktioner i algebra</h1>
+            <img style="background-color:white;width:350px" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Function_machine2-sv.svg">
+        </div>
+        <div class="slide">
+            <h1>return-uppgift</h1>
+            <div data-time="10:00" class="timer"></div>
+            <p>Skapa två funktioner, en funktion ska ta emot ett argument (en karaktär) och kolla om det är en versal. Om det inte är det ska den göra om den till en versal och returnera den. Om det redan är en versal ska den bara returneras som den är.</p>
+            <p>
+                Den andra funktionen ska ha en input där användare kan skriva in ett meddelande och sen ska det meddelandes göras om så att alla bokstäver är versaler, använd den andra funktionen, och sist skrivas ut till skärmen.
+            </p>
+            <p>
+                Ex: input: <code>"TjeNa MittBEna"</code> output: <code>"TJENA MITTBENA"</code>
+            </p>
         </div>
     </div>
 

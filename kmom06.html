@@ -12,29 +12,73 @@
     <div id="presentation" class="presentation"></div>
 
     <div id="slide-container" class="slide-container">
-        <div class="slide">
+        <div class="slide fade-in">
             <h1>kmom06</h1>
             <p>Dictionaries och tupler</p>
         </div>
 
-        <div class="slide">
-            <h1>Navigation</h1>
-            <p><code>Right-arrow</code> and <code>Enter</code> moves forward. <code>Left-arrow</code> moves back.</p>
+        <div class="slide fade-in">
+            <h1>Dictionaries</h1>
+            <p><code>dict</code></p>
+
+            <p>I andra programspråk kallas dictionaries ofta <code>Associative Arrays</code>, <code>Map</code> eller <code>Hash(map)</code>.
+
         </div>
 
         <div class="slide fade-in">
-            <h1>Fancy</h1>
-            <p>Use <code>.fade-in</code> to make it look fancy.</p>
+            <h1>Dictionaries</h1>
+            <p>Gemensamt är att det alltid finns ett nyckel-värde par.</p>
+
+            <pre>courses = {
+    "python" : "Programmering och problemlösning med Python",
+    "htmlphp" : "Webbteknologier"
+}
+            </pre>
         </div>
 
-        <div class="slide">
-            <h1>Timer</h1>
-            <div data-time="1:00" class="timer"></div>
+        <div class="slide fade-in">
+            <h1>Dictionaries</h1>
+            <p><a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries" target="_blank">Dokumentation</a></p>
         </div>
 
-        <div class="slide">
-            <h1>The end</h1>
-            <p>This is the end, Beautiful friend, This is the end, My only friend, The end.</p>
+        <div class="slide fade-in">
+            <h1>Dictionaries uppgift</h1>
+            <p>Skriv ett program som frågar användaren efter ett namn och en skostorlek, tills användaren skriver done.</p>
+
+            <p>Programmet skriver sedan ut en sorterad lista med 'namn: skostorlek' och avslutar med medelvärdet av skostorlekarna.</p>
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>Blandade datatyper</h1>
+            <p>Vi utgår från vår <code>courses</code>-dict.</p>
+
+            <pre>courses = {
+    "python" : "Programmering och problemlösning med Python",
+    "htmlphp" : "Webbteknologier"
+}
+            </pre>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>Uppgift</h1>
+            <p>Fortsätt från ditt tidigare program med namn och skostorlek. Istället för skostorleken spara en <code>dict</code> med skostorlek och tröjstorlek samt en lista med tuples som representerar de 3 senaste GPS-koordinater där en person har varit.</p>
+
+            <p>Exempel:</p>
+            <pre>persons = {
+    "Emil" : {
+        "skostorlek": 44,
+        "tröjstorlek": "L",
+        "koordinater": [
+            (40.712, -74.005),
+            (28.358, -14.053),
+            (55.927, 12.300)
+        ]
+    }
+}</pre>
+
+            <div data-time="10:00" class="timer"></div>
         </div>
     </div>
 

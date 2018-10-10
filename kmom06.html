@@ -50,6 +50,35 @@
             <div data-time="10:00" class="timer"></div>
         </div>
 
+
+
+        <div class="slide fade-in">
+            <h1>Tuples</h1>
+            <p><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples" target="_blank">Dokumentation</a></p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>egenskaper</h1>
+            <p>
+            <ul>
+                <li>Immutable</li>
+                <li>Snabbare än listor</li>
+                <li>Mindre än listor</li>
+                <li>Säkrare kod</li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>Tuples uppgift</h1>
+            <p>Skriv ett program där man kan söka efter filmer. Det ska gå att söka på namn, år utgiven och regisör för filmerna. Data om en film sparas i en tuple och alla tuples sparas i en lista. Alla filmer som matchar sökningen ska visas och vara sorterade i bokstavsordning på filmens namn.
+            <br>Om filmerna Scott Pilgrim vs. the world och Baby Driver finns i listan och man söker efter Edgar Wright ska båda komma upp som resultat och Baby Driver visas överst.</p>
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+
+
+
         <div class="slide fade-in">
             <h1>Blandade datatyper</h1>
             <p>Vi utgår från vår <code>courses</code>-dict.</p>
@@ -80,6 +109,29 @@
 
             <div data-time="10:00" class="timer"></div>
         </div>
+        
+        
+        <div class="slide fade-in">
+            <h1>Praktisk problemlösning</h1>
+
+            <p>Du ska skapa en poäng räknare för Alfapet. Varje bokstav är värd en viss poäng, ex. ordet "Hello" är värt 8 poäng. "h" är värt 4 och resten av bokstäverna är värda 1 poäng.</p>
+            <p>
+            För att få reda på varje bokstavs poäng behöver du parse följande sträng: <code>"xygkjjfzqfdmqvbyzemcvywkizxxvxmpgaxqzwthqbjjqjzjvhwpxzkudqrcxkqzphhzcszykbzflfjqqqonxjw"</code> varje bokstav är med så många gånger som den är värd. "h" är med 4 gånger.
+            Skriv en funktion som tar emot en sträng och räknar ut dess poäng.
+            
+            <br><br>Extra: Funktionen ska även klara av multipliers, en lista med en multiplier för varje bokstav. <code>"hello", [3, 1, 1, 1, 1]</code> ger 16 poäng.
+            <br>Delux: Spara alla ord och poäng och skriv ut top 3.
+        </p><pre>
+Test:
+Input “hello” → 8, [3, 1, 1, 1, 1] → 16 
+Input “world” → 9, [1, 2, 1, 1, 2] → 12
+Input “Maximize” → 28, [1, 1, 2, 1, 1, 1, 3, 1] → 56
+Input “Flapjack” → 26, [1, 1, 1, 1, 1, 1, 1, 1] → 26
+            </pre>
+                
+
+            </div>
+        
     </div>
 
     <script type="text/javascript" src="slideorama.js"></script>

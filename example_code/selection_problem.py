@@ -1,7 +1,6 @@
 import random
 import time
 
-
 n = 10000000
 random_list = random.sample(range(n * 10), n)
 

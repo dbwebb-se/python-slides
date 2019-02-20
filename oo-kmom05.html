@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>oopython - kmom05</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="python.css" />
+</head>
+<body>
+    <div id="presentation" class="presentation"></div>
+
+    <div id="slide-container" class="slide-container">
+        <div class="slide">
+            <h1>kmom05 - Algoritmanalys</h1>
+            <p>Problem</p>
+            <p>Lösningar</p>
+            <p>Vilken är bäst?</p>
+        </div>
+
+        <div class="slide">
+            <h1>Problem</h1>
+
+            <p>Vi börjar i andra änden.</p>
+        </div>
+
+        <div class="slide">
+            <h1>Komma in till stan</h1>
+
+            <p>Åka buss 1?</p>
+            <p>Gå till Bergåsa? Och sen någon buss eller tåg?</p>
+            <p>Ta bilen?</p>
+        </div>
+
+        <div class="slide">
+            <h1>Räkna personer</h1>
+
+            <p>Kan vi göra det på olika sätt?</p>
+        </div>
+
+        <div class="slide">
+            <h1>Dela upp problemet</h1>
+
+            <p>Vi har sagt det genom hela utbildningen.</p>
+            <p>Gäller det även när en dator ska lösa problemet?</p>
+        </div>
+
+        <div class="slide">
+            <h1>Hur mäter vi snabbhet?</h1>
+
+            <p>Vad är det vi vill mäta?</p>
+        </div>
+
+        <div class="slide">
+            <h1>Modell</h1>
+
+            <p>Sekventiell</p>
+            <p>Simpla instruktioner <code>+, -, *, /, =</code></p>
+            <p>Alla instruktioner tar 1 tidsenhet.</p>
+            <p>Inte perfekt modell, men tillräckligt bra.</p>
+        </div>
+
+        <div class="slide">
+            <h1>Exempel</h1>
+            <pre><code>N = 10
+big_sum = 0
+for index in range(N):
+    big_sum = big_sum + N * N
+</code></pre>
+        </div>
+
+        <div class="slide">
+            <h1>Exempel</h1>
+            <pre><code>N = 10000
+big_sum = 0
+for index in range(N):
+    big_sum = big_sum + N * N
+</code></pre>
+        </div>
+
+        <div class="slide">
+            <h1>big-O</h1>
+            <p>Hur snabbt växer exekveringstiden när N blir stort</p>
+        </div>
+
+        <div class="slide">
+            <h1>Olika växtrater</h1>
+            <p>C</p>
+            <p>log N</p>
+            <p>N</p>
+            <p>N log N</p>
+            <p>N<sup>2</sup></p>
+        </div>
+
+        <div class="slide">
+            <h1>QuickSort</h1>
+            <pre><code>def quick_sort(items):
+    """ Quicksort """
+    if len(items) > 1:
+        pivot_index = len(items) // 2
+        smaller_items = []
+        larger_items = []
+
+        for i, val in enumerate(items):
+            if i != pivot_index:
+                if val < items[pivot_index]:
+                    smaller_items.append(val)
+                else:
+                    larger_items.append(val)
+
+        quick_sort(smaller_items)
+        quick_sort(larger_items)
+        items[:] = smaller_items + [items[pivot_index]] + larger_items
+
+    return items</code></pre>
+        </div>
+
+        <div class="slide">
+            <h1>Ett problem (selection problem)</h1>
+
+            <p>Vi har en lista med N stycken heltal.<br>
+                Bestäm det K största talet.</p>
+        </div>
+
+
+
+        <div class="slide fade-in">
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="slideorama.js"></script>
+</body>
+</html>

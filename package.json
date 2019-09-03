@@ -1,0 +1,34 @@
+{
+  "name": "python-slides",
+  "version": "1.0.0",
+  "description": "Slides for python",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -d",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbwebb-se/python-slides.git"
+  },
+  "keywords": [
+    "slides"
+  ],
+  "author": "Emil Folino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbwebb-se/python-slides/issues"
+  },
+  "homepage": "https://github.com/dbwebb-se/python-slides#readme",
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "dependencies": {
+    "highlight.js": "^9.15.10",
+    "slideorama": "^1.0.2"
+  }
+}

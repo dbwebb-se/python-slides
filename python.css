@@ -63,6 +63,9 @@ a {
 
 code {
     font-size: 2rem;
+    background-color: #ccc;
+    padding: 0.4rem 1rem;
+    color: #333;
 }
 
 @media (min-width: 64em) {

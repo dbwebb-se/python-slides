@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack -d",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "production": "npm run build && rsync -av bundle.js python.css *.html efo@emilfolino.se:/var/www/python-slides.emilfolino.se/html/"
   },
   "repository": {
     "type": "git",

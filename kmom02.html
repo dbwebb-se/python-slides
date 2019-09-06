@@ -19,19 +19,29 @@
 
         <div class="slide">
             <h1>if</h1>
+            <p>But first:</p>
+            <pre><code class="hljs python">==
+!=
+>
+<
+>=
+<=
+and
+or
+not</code></pre>
         </div>
 
         <div class="slide fade-in">
             <h1>if-uppgift</h1>
             <div data-time="10:00" class="timer"></div>
 
-            <p>Skriv ett program som tar emot en sträng.</p>
+            <p>Skriv ett program som tar emot två heltal, se till att göra om de till heltal med <code>int()</code>.</p>
 
-            <p>Programmet ska sedan avgöra om strängen uppfyller följande krav:</p>
+            <p>Programmet ska sedan avgöra om siffrorna uppfyller följande krav:</p>
             <ol>
-                <li>Strängen är längre än 8 bokstäver. Tips: Använd <code>len()</code>.</li>
-                <li>Strängen innehåller bokstaven 'e'. Se till att programmet klarar av 'E' också.</li>
-                <li>Strängen innehåller inte siffror. Tips: Använd <code>isalpha()</code>.</li>
+                <li>Båda siffrorna är större än 10 och mindre än 100.</li>
+                <li>Minst en av siffrorna är mindre än 50.</li>
+                <li>Minst en av siffrorna är större än 40.</li>
             </ol>
 
             <p>Om alla krav uppfylls skriv ut 'Approved' annars 'Rejected'.</p>
@@ -97,6 +107,6 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="slideorama.js"></script>
+    <script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>

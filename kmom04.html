@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>kmom04</title>
+    <title>kmom03</title>
 
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="python.css" />
@@ -12,63 +12,126 @@
     <div id="presentation" class="presentation"></div>
 
     <div id="slide-container" class="slide-container">
-        <div class="slide">
+        <div class="slide fade-in">
             <h1>kmom04</h1>
-            <p>Moduler och filer</p>
+            <p>Funktioner</p>
+            <pre><code>def NAME( LIST OF PARAMETERS ):
+                STATEMENTS</code></pre>
         </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Argument / Parametrar</h1>
+
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Uppgift</h1>
+            <div data-time="10:00" class="timer"></div>
+
+            <p>Skapa en funktion <code>layer_cake()</code> som skriver ut en formaterat sträng med hjälp av <code>str.format()</code>.</p>
+
+            <p>Funktionen ska ta emot 4 argument: färg, 2 sorters fyllning och antal lager. Alla argument ska ha ett förifylld värde.</p>
+
+            <p>Anropa sedan funktionen med 0, 1, 2, 3 och 4 argument samt med bara sista argumentet (antal lager) med hjälp av <code>argument=värde</code></p>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Scope och moduler</h1>
+
+        </div>
+
+
 
         <div class="slide">
             <h1>Moduler</h1>
             <h2>Coupling & Cohesion</h2>
-        </div>
-
-        <div class="slide">
-            <h1>Moduler</h1>
             <h2>Single Responsibility Principle (SRP)</h2>
         </div>
 
-        <div class="slide">
-            <h1>Läsa från fil</h1>
+
+
+        <div class="slide fade-in">
+            <h1>Funktioner i algebra</h1>
+            <img style="background-color:white;width:350px" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Function_machine2-sv.svg">
         </div>
 
-        <div class="slide">
-            <h1>Spara data i minnet</h1>
-            <figure style="display: inline-block;">
-            <img style="background-color:white;width:350px" src="https://cdn.pixabay.com/photo/2019/08/08/16/56/ram-4393381_960_720.jpg">
-              <figcaption>RAM-minne</figcaption>
-            </figure>
-            <figure style="display: inline-block;float:right">
-            <img style="background-color:white;width:350px" src="http://img.tradera.net/images/015/280135015_4881c09c-fe7f-44c7-b642-5d3f64cef631.jpg">
-              <figcaption>Hårddisk</figcaption>
-            </figure>
-        </div>
+
 
         <div class="slide">
-            <h1>Läsa från fil uppgift</h1>
-            <p>Skriv ett program där som läser upp  de X första raderna, användaren skriver in hur många rader som ska skrivas ut.</p>
-
+            <h1>return-uppgift</h1>
             <div data-time="10:00" class="timer"></div>
+            <p>Skapa två funktioner, en funktion ska ta emot ett argument (en karaktär) och kolla om det är en versal. Om det inte är det ska den göra om den till en versal och returnera den.
+                Om det redan är en versal ska den göras om till en gemen och returneras. Lägg denna funktionen i en egen fil. Tips, använd <code>isupper()</code>, <code>upper()</code> och <code>lower()</code>.</p>
+            <p>
+                Den andra funktionen ska ta en input där användare kan skriva in ett meddelande. 
+                Meddelandet ska göras om så att versaler blir gemeners och gemenr blir versaler, använd den andra funktionen för att göra om varje bokstav, och sist skriva ut det omgjorda meddelandet till skärmen.
+                Lägg denna funktionen i en annan fil. I denna filen importera den första. Använd <code>if __name__ == "__main__"</code> för att anropa funktionen som startar programmet.
+            </p>
+            <p>
+                Ex: input: <code>"TjeNa MittBEna"</code> output: <code>"tJEnA mITTbeNA"</code>
+            </p>
         </div>
 
-        <div class="slide">
-            <h1>Skriv till fil</h1>
-            <p>Två sätt <code>write "w"</code> och <code>append "a"</code></p>
+
+
+        <div class="slide fade-in">
+            <h1>Exekveringsflöde och globala variabler</h1>
+
         </div>
 
-        <div class="slide">
-            <h1>Skriv till fil uppgift</h1>
-            <p>Skriv ett program som tar emot input från användaren. Programmet ska fungera som inköpslista, så för varje vara användaren skriver in ska varan liggas till sist i en textfil.</p>
 
-            <p>Med kommandot "shop" ska hela listan skrivas ut och textfilen ska tömmas.</p>
-            <div data-time="10:00" class="timer"></div>
+
+        <div class="slide fade-in">
+            <h1>Funktion-uppgift</h1>
+            <div data-time="08:00" class="timer"></div>
+
+            <pre style="display:inline-block; width: 20%"><code>def f1():
+    pass
+
+def f2():
+    f4()
+
+def f3():
+    f2()
+    f1()
+
+def f4():
+    pass
+
+f3()</code></pre>
+
+
+
+        <div style="display:inline-block;width: 70%;vertical-align: top;"><p>Skriv av koden och ta bort <code>pass</code> från f1 och f4.</p>
+            <p>Lägg till så att varje funktion ska innehålla ett append anrop på en lista och lägga till ett värde, i ordningen 1,2,3 eller 4. Lägg till det i rätt funktion så att det läggs i rätt ordningen: </p>
+            <code>[1, 2 ,3, 4]</code>
         </div>
+        </div>
+
+
 
         <div class="slide fade-in">
             <h1>Praktisk problemlösning</h1>
-
-            <p>I filen `example/ping-pong/matches.txt` i exempelmappen i kursrepot finns statistik från bordtennis. Filen är strukturerad med en match på varje rad och på följande sätt. Först kommer vem som spelat, ett mellanrum sen den som vann.</p>
-            <p>Exempel: <code>Andreas-Emil Emil</code></p>
-            <p>Skriv ett program som läser in filen och räknar ut hur många vinster Mikael har enligt statistiken.</p>
+        
+            <p>Skriv en funktion som tar emot en lista som innehåller heltal och en (1) nivå av nestlade listor, även dessa med
+                heltal.</p>
+        
+            <p>Iterera igenom listan och summera alla siffror i förälder listan. Varje gång du stöter på en barn lista summera
+                siffrorna i denna och skriv ut barnlistans summa. Addera barnlistornas summa till förälderlistans totala summa.
+            </p>
+        
+            <p>Listor att testa med:</p>
+            <pre>
+        [1, 2, 3, 4]
+        [1, 2, [6, 7, 8], 5, 7, 9]
+        [[1, 2], [6, 7, 8], [5, 7, 9], [7, 9, 13], 2]
+                    </pre>
         </div>
     </div>
 

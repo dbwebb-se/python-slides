@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>kmom05</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="python.css" />
+</head>
+<body>
+    <div id="presentation" class="presentation"></div>
+
+    <div id="slide-container" class="slide-container">
+        <div class="slide">
+            <h1>kmom05</h1>
+            <p>Listor</p>
+        </div>
+
+
+
+        <div class="slide">
+            <h1>Indexering</h1>
+            <!-- <img style="background-color:white;" src="img/list.png"> -->
+            <figure style="display: inline-block;">
+                <img style="background-color:white;width:600px" src="https://cdn.programiz.com/sites/tutorial2program/files/python-list-index.png">
+            </figure>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Slices</h1>
+            <pre>
+instruments = ["Triangle", "Drums", "Accordion",
+                "Saxophone", "Banjo", "Guitar",
+                "Synthesizer", "Keyboard"]
+
+print(instruments[2:4])
+print(instruments[:4])
+print(instruments[-2:])
+print(instruments[:-1])
+print(instruments[::2])
+print(instruments[::-2])
+            </pre>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Listor uppgift</h1>
+            <div data-time="10:00" class="timer"></div>
+
+            <p>Skriv ett program för att bjuda in folk till bio.</p>
+            <p>Programmet ska innehålla en lista där man kan lägga till nya människor som ska med. Samma namn får inte förekomma flera gånger.</p>
+            <p>Det ska även gå att vid input skicka in flera namn separerade med <code>,</code>, då ska strängen göras om till en lista, så varje namn blir ett eget element, och konkateneras med den existerande listan.</p>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Inbyggda funktioner</h1>
+            <p><a target="_blank" href="https://docs.python.org/3/tutorial/datastructures.html">Python3 docs Data Structures</a></p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>Listor uppgift</h1>
+            <div data-time="10:00" class="timer"></div>
+
+            <p>Skriv ett program som tar emot input från användaren och lägger till input i en lista. När användaren skriver 'done' ska programmet skriva ut följande:</p>
+
+            <p>
+                <ul>
+                    <li>Vart annat element i listan.</li>
+                    <li>De tre sista elementen.</li>
+                    <li>Element på plats 2 och 3.</li>
+                </ul>
+            </p>
+        </div>
+
+
+
+        <div class="slide">
+            <h1>Listor och filer</h1>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Listor och filer uppgift</h1>
+            <div data-time="10:00" class="timer"></div>
+
+            <p>Skapa en fil med valfritt innehåll på olika rader.</p>
+            <p>Skriv ett program som läser upp filen som lista, sortera listan, tar bort sista elementet och skriver över filen med den uppdaterade listan.</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Praktisk problemlösning</h1>
+
+            <p>Skriv en funktion som tar emot en lista som innehåller heltal och en (1) nivå av nestlade listor, även dessa med heltal.</p>
+
+            <p>Iterera igenom listan och summera alla siffror i förälder listan. Varje gång du stöter på en barn lista summera siffrorna i denna och skriv ut barnlistans summa. Addera barnlistornas summa till förälderlistans totala summa.</p>
+
+            <p>Listor att testa med:</p>
+            <pre>
+[1, 2, 3, 4]
+[1, 2, [6, 7, 8], 5, 7, 9]
+[[1, 2], [6, 7, 8], [5, 7, 9], [7, 9, 13], 2]
+            </pre>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>

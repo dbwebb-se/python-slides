@@ -12,103 +12,100 @@
     <div id="presentation" class="presentation"></div>
 
     <div id="slide-container" class="slide-container">
-        <div class="slide">
+        <div class="slide fade-in">
             <h1>kmom05</h1>
-            <p>Listor</p>
-        </div>
-
-
-
-        <div class="slide">
-            <h1>Indexering</h1>
-            <!-- <img style="background-color:white;" src="img/list.png"> -->
-            <figure style="display: inline-block;">
-                <img style="background-color:white;width:600px" src="https://cdn.programiz.com/sites/tutorial2program/files/python-list-index.png">
-            </figure>
+            <p>Dictionaries och tupler</p>
         </div>
 
 
 
         <div class="slide fade-in">
-            <h1>Slices</h1>
-            <pre>
-instruments = ["Triangle", "Drums", "Accordion",
-                "Saxophone", "Banjo", "Guitar",
-                "Synthesizer", "Keyboard"]
-
-print(instruments[2:4])
-print(instruments[:4])
-print(instruments[-2:])
-print(instruments[:-1])
-print(instruments[::2])
-print(instruments[::-2])
-            </pre>
+            <h1>Tuples</h1>
+            <p><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" target="_blank">Dokumentation</a></p>
         </div>
 
 
 
         <div class="slide fade-in">
-            <h1>Listor uppgift</h1>
-            <div data-time="10:00" class="timer"></div>
-
-            <p>Skriv ett program för att bjuda in folk till bio.</p>
-            <p>Programmet ska innehålla en lista där man kan lägga till nya människor som ska med. Samma namn får inte förekomma flera gånger.</p>
-            <p>Det ska även gå att vid input skicka in flera namn separerade med <code>,</code>, då ska strängen göras om till en lista, så varje namn blir ett eget element, och konkateneras med den existerande listan.</p>
-        </div>
-
-
-
-        <div class="slide fade-in">
-            <h1>Inbyggda funktioner</h1>
-            <p><a target="_blank" href="https://docs.python.org/3/tutorial/datastructures.html">Python3 docs Data Structures</a></p>
-        </div>
-
-        <div class="slide fade-in">
-            <h1>Listor uppgift</h1>
-            <div data-time="10:00" class="timer"></div>
-
-            <p>Skriv ett program som tar emot input från användaren och lägger till input i en lista. När användaren skriver 'done' ska programmet skriva ut följande:</p>
-
+            <h1>egenskaper</h1>
             <p>
-                <ul>
-                    <li>Vart annat element i listan.</li>
-                    <li>De tre sista elementen.</li>
-                    <li>Element på plats 2 och 3.</li>
-                </ul>
+            <ul>
+                <li>Immutable</li>
+                <li>Snabbare än listor</li>
+                <li>Mindre än listor</li>
+                <li>Säkrare kod</li>
+            </ul>
             </p>
         </div>
 
 
 
-        <div class="slide">
-            <h1>Listor och filer</h1>
+        <div class="slide fade-in">
+            <h1>Tuples uppgift</h1>
+            <p>Skriv ett program där man kan söka efter filmer. Det ska gå att söka på namn, år utgiven och regisör för filmerna. Alla filmer som matchar sökningen ska visas och vara sorterade i bokstavsordning på filmens namn. Spara data om en film tuple och spara alla tuples i en lista.
+            <br>Exempel: Om filmerna "Scott Pilgrim vs. the world" och "Baby Driver" finns i listan och man söker efter "Edgar Wright" ska båda komma upp som resultat och "Baby Driver" visas överst.</p>
+            
+            <p> Gör <code>dbwebb update</code> och sen finns det en lista med filmer i <code>example/lectures/kmom05/movies.txt</code> som ni kan använda för uppgiften.</p>
+
+            <div data-time="10:00" class="timer"></div>
         </div>
 
 
 
         <div class="slide fade-in">
-            <h1>Listor och filer uppgift</h1>
-            <div data-time="10:00" class="timer"></div>
+            <h1>Dictionaries</h1>
+            <p><code>dict</code></p>
 
-            <p>Skapa en fil med valfritt innehåll på olika rader.</p>
-            <p>Skriv ett program som läser upp filen som lista, sortera listan, tar bort sista elementet och skriver över filen med den uppdaterade listan.</p>
+            <p>I andra programspråk kallas dictionaries ofta <code>Associative Arrays</code>, <code>Map</code> eller <code>Hash(map)</code>.
+
         </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Dictionaries</h1>
+            <p>Gemensamt är att det alltid finns ett nyckel-värde par.</p>
+
+            <pre>courses = {
+    "python" : "Programmering och problemlösning med Python",
+    "htmlphp" : "Webbteknologier"
+}
+            </pre>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Dictionaries uppgift</h1>
+            <p>Skriv ett program som frågar användaren efter ett namn och en skostorlek, tills användaren skriver done.</p>
+
+            <p>Programmet skriver sedan ut en sorterad lista med 'namn: skostorlek' och avslutar med medelvärdet av skostorlekarna.</p>
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+
 
 
         <div class="slide fade-in">
             <h1>Praktisk problemlösning</h1>
 
-            <p>Skriv en funktion som tar emot en lista som innehåller heltal och en (1) nivå av nestlade listor, även dessa med heltal.</p>
+            <p>Du ska skapa en poäng räknare för Alfapet. Varje bokstav är värd en viss poäng, ex. ordet "Hello" är värt 8 poäng. "h" är värt 4 och resten av bokstäverna är värda 1 poäng.</p>
+            <p>
+            För att få reda på varje bokstavs poäng behöver du parse följande sträng: <code>"xygkjjfzqfdmqvbyzemcvywkizxxvxmpgaxqzwthqbjjqjzjvhwpxzkudqrcxkqzphhzcszykbzflfjqqqonxjw"</code> varje bokstav är med så många gånger som den är värd. "h" är med 4 gånger.
+            Skriv en funktion som tar emot en sträng och räknar ut dess poäng.
 
-            <p>Iterera igenom listan och summera alla siffror i förälder listan. Varje gång du stöter på en barn lista summera siffrorna i denna och skriv ut barnlistans summa. Addera barnlistornas summa till förälderlistans totala summa.</p>
-
-            <p>Listor att testa med:</p>
-            <pre>
-[1, 2, 3, 4]
-[1, 2, [6, 7, 8], 5, 7, 9]
-[[1, 2], [6, 7, 8], [5, 7, 9], [7, 9, 13], 2]
+            <br><br>Extra: Funktionen ska även klara av multipliers, en lista med en multiplier för varje bokstav. <code>"hello", [3, 1, 1, 1, 1]</code> ger 16 poäng.
+        </p><pre>
+Test:
+Input “hello” → 8, [3, 1, 1, 1, 1] → 16
+Input “world” → 9, [1, 2, 1, 1, 2] → 12
+Input “Maximize” → 28, [1, 1, 2, 1, 1, 1, 3, 1] → 56
+Input “Flapjack” → 26, [1, 1, 1, 1, 1, 1, 1, 1] → 26
             </pre>
-        </div>
+
+
+            </div>
+
     </div>
 
     <script type="text/javascript" src="bundle.js"></script>

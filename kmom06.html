@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>kmom06</title>
+    <title>kmom04</title>
 
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="python.css" />
@@ -12,96 +12,69 @@
     <div id="presentation" class="presentation"></div>
 
     <div id="slide-container" class="slide-container">
-        <div class="slide fade-in">
-            <h1>kmom06</h1>
-            <p>Dictionaries och tupler</p>
+        <div class="slide">
+            <h1>kmom04</h1>
+            <p>Moduler och filer</p>
         </div>
 
-
-        <div class="slide fade-in">
-            <h1>Tuples</h1>
-            <p><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" target="_blank">Dokumentation</a></p>
+        <div class="slide">
+            <h1>Moduler</h1>
+            <h2>Coupling & Cohesion</h2>
         </div>
 
-        <div class="slide fade-in">
-            <h1>egenskaper</h1>
-            <p>
-            <ul>
-                <li>Immutable</li>
-                <li>Snabbare än listor</li>
-                <li>Mindre än listor</li>
-                <li>Säkrare kod</li>
-            </ul>
-            </p>
+        <div class="slide">
+            <h1>Moduler</h1>
+            <h2>Single Responsibility Principle (SRP)</h2>
         </div>
 
-        <div class="slide fade-in">
-            <h1>Tuples uppgift</h1>
-            <p>Skriv ett program där man kan söka efter filmer. Det ska gå att söka på namn, år utgiven och regisör för filmerna. Alla filmer som matchar sökningen ska visas och vara sorterade i bokstavsordning på filmens namn. Spara data om en film tuple och spara alla tuples i en lista.
-            <br>Exempel: Om filmerna "Scott Pilgrim vs. the world" och "Baby Driver" finns i listan och man söker efter "Edgar Wright" ska båda komma upp som resultat och "Baby Driver" visas överst.</p>
-            
-            <p> Gör <code>dbwebb update</code> och sen finns det en lista med filmer i <code>example/lectures/kmom06/movies.txt</code> som ni kan använda för uppgiften.</p>
+        <div class="slide">
+            <h1>Läsa från fil</h1>
+        </div>
+
+        <div class="slide">
+            <h1>Spara data i minnet</h1>
+            <figure style="display: inline-block;">
+            <img style="background-color:white;width:350px" src="https://cdn.pixabay.com/photo/2019/08/08/16/56/ram-4393381_960_720.jpg">
+              <figcaption>RAM-minne</figcaption>
+            </figure>
+            <figure style="display: inline-block;float:right">
+            <img style="background-color:white;width:350px" src="http://img.tradera.net/images/015/280135015_4881c09c-fe7f-44c7-b642-5d3f64cef631.jpg">
+              <figcaption>Hårddisk</figcaption>
+            </figure>
+        </div>
+
+        <div class="slide">
+            <h1>Läsa från fil uppgift</h1>
+            <p>Skriv ett program där som läser upp  de X första raderna, användaren skriver in hur många rader som ska skrivas ut.</p>
 
             <div data-time="10:00" class="timer"></div>
         </div>
 
-        <div class="slide fade-in">
-            <h1>Dictionaries</h1>
-            <p><code>dict</code></p>
-
-            <p>I andra programspråk kallas dictionaries ofta <code>Associative Arrays</code>, <code>Map</code> eller <code>Hash(map)</code>.
-
+        <div class="slide">
+            <h1>Skriv till fil</h1>
+            <p>Två sätt <code>write "w"</code> och <code>append "a"</code></p>
         </div>
 
-        <div class="slide fade-in">
-            <h1>Dictionaries</h1>
-            <p>Gemensamt är att det alltid finns ett nyckel-värde par.</p>
+        <div class="slide">
+            <h1>Skriv till fil uppgift</h1>
+            <p>Skriv ett program som tar emot input från användaren. Programmet ska fungera som inköpslista, så för varje vara användaren skriver in ska varan liggas till sist i en textfil.</p>
 
-            <pre>courses = {
-    "python" : "Programmering och problemlösning med Python",
-    "htmlphp" : "Webbteknologier"
-}
-            </pre>
-        </div>
-
-
-        <div class="slide fade-in">
-            <h1>Dictionaries uppgift</h1>
-            <p>Skriv ett program som frågar användaren efter ett namn och en skostorlek, tills användaren skriver done.</p>
-
-            <p>Programmet skriver sedan ut en sorterad lista med 'namn: skostorlek' och avslutar med medelvärdet av skostorlekarna.</p>
-
+            <p>Med kommandot "shop" ska hela listan skrivas ut och textfilen ska tömmas.</p>
             <div data-time="10:00" class="timer"></div>
         </div>
-
 
         <div class="slide fade-in">
             <h1>Text analyzer och felmeddelanden</h1>
             <p>Låt oss titta på det!</p>
         </div>
 
-
         <div class="slide fade-in">
             <h1>Praktisk problemlösning</h1>
 
-            <p>Du ska skapa en poäng räknare för Alfapet. Varje bokstav är värd en viss poäng, ex. ordet "Hello" är värt 8 poäng. "h" är värt 4 och resten av bokstäverna är värda 1 poäng.</p>
-            <p>
-            För att få reda på varje bokstavs poäng behöver du parse följande sträng: <code>"xygkjjfzqfdmqvbyzemcvywkizxxvxmpgaxqzwthqbjjqjzjvhwpxzkudqrcxkqzphhzcszykbzflfjqqqonxjw"</code> varje bokstav är med så många gånger som den är värd. "h" är med 4 gånger.
-            Skriv en funktion som tar emot en sträng och räknar ut dess poäng.
-
-            <br><br>Extra: Funktionen ska även klara av multipliers, en lista med en multiplier för varje bokstav. <code>"hello", [3, 1, 1, 1, 1]</code> ger 16 poäng.
-            <br>Delux: Spara alla ord och poäng och skriv ut top 3.
-        </p><pre>
-Test:
-Input “hello” → 8, [3, 1, 1, 1, 1] → 16
-Input “world” → 9, [1, 2, 1, 1, 2] → 12
-Input “Maximize” → 28, [1, 1, 2, 1, 1, 1, 3, 1] → 56
-Input “Flapjack” → 26, [1, 1, 1, 1, 1, 1, 1, 1] → 26
-            </pre>
-
-
-            </div>
-
+            <p>I filen `example/ping-pong/matches.txt` i exempelmappen i kursrepot finns statistik från bordtennis. Filen är strukturerad med en match på varje rad och på följande sätt. Först kommer vem som spelat, ett mellanrum sen den som vann.</p>
+            <p>Exempel: <code>Andreas-Emil Emil</code></p>
+            <p>Skriv ett program som läser in filen och räknar ut hur många vinster Mikael har enligt statistiken.</p>
+        </div>
     </div>
 
     <script type="text/javascript" src="bundle.js"></script>

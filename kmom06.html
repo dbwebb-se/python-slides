@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>kmom04</title>
+    <title>kmom06</title>
 
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="python.css" />
@@ -13,23 +13,17 @@
 
     <div id="slide-container" class="slide-container">
         <div class="slide">
-            <h1>kmom04</h1>
-            <p>Moduler och filer</p>
+            <h1>kmom06</h1>
+            <p>Läsa och skriva till filer</p>
         </div>
 
-        <div class="slide">
-            <h1>Moduler</h1>
-            <h2>Coupling & Cohesion</h2>
-        </div>
 
-        <div class="slide">
-            <h1>Moduler</h1>
-            <h2>Single Responsibility Principle (SRP)</h2>
-        </div>
 
         <div class="slide">
             <h1>Läsa från fil</h1>
         </div>
+
+
 
         <div class="slide">
             <h1>Spara data i minnet</h1>
@@ -37,23 +31,31 @@
             <img style="background-color:white;width:350px" src="https://cdn.pixabay.com/photo/2019/08/08/16/56/ram-4393381_960_720.jpg">
               <figcaption>RAM-minne</figcaption>
             </figure>
-            <figure style="display: inline-block;float:right">
+
+            <figure style="display: inline-block;">
             <img style="background-color:white;width:350px" src="http://img.tradera.net/images/015/280135015_4881c09c-fe7f-44c7-b642-5d3f64cef631.jpg">
               <figcaption>Hårddisk</figcaption>
             </figure>
         </div>
 
+
+
         <div class="slide">
             <h1>Läsa från fil uppgift</h1>
             <p>Skriv ett program där som läser upp  de X första raderna, användaren skriver in hur många rader som ska skrivas ut.</p>
+            <p>Skapa en egen textfil med valfritt innehåll eller så kan ni kopiera "example/old_exams/lp1-2019/manifesto.txt".</p>
 
             <div data-time="10:00" class="timer"></div>
         </div>
+
+
 
         <div class="slide">
             <h1>Skriv till fil</h1>
             <p>Två sätt <code>write "w"</code> och <code>append "a"</code></p>
         </div>
+
+
 
         <div class="slide">
             <h1>Skriv till fil uppgift</h1>
@@ -63,18 +65,58 @@
             <div data-time="10:00" class="timer"></div>
         </div>
 
-        <div class="slide fade-in">
-            <h1>Text analyzer och felmeddelanden</h1>
-            <p>Låt oss titta på det!</p>
+
+
+        <!-- <div class="slide">
+            <h1>Skriv till fil uppgift</h1>
+            <p>Skapa en file med valdrigg inehåll på flera rader. Skriv ett program som läser upp filen som en lista, sortera listan, ta bort sista värdet och skriv över filen med den uppdaterade listan.
+            </p>
+            <div data-time="10:00" class="timer"></div>
+        </div> -->
+
+
+
+        <div class="slide">
+            <h1>Mer dictionaries!</h1>
         </div>
 
-        <div class="slide fade-in">
+
+
+        <!-- <div class="slide fade-in">
             <h1>Praktisk problemlösning</h1>
 
             <p>I filen `example/ping-pong/matches.txt` i exempelmappen i kursrepot finns statistik från bordtennis. Filen är strukturerad med en match på varje rad och på följande sätt. Först kommer vem som spelat, ett mellanrum sen den som vann.</p>
             <p>Exempel: <code>Andreas-Emil Emil</code></p>
-            <p>Skriv ett program som läser in filen och räknar ut hur många vinster Mikael har enligt statistiken.</p>
+            <p>Skriv ett program som läser in filen och räknar ut hur många vinster varje spelare har.</p>
+        </div> -->
+    
+    
+        <!-- Nästa år 2021 Gör uppgiften ovanför istället. Då ska denna uppgiften vara gjort i kmom05 istället. -->
+        <div class="slide fade-in">
+            <h1>Praktisk problemlösning</h1>
+        
+            <p>Du ska skapa en poäng räknare för Alfapet. Varje bokstav är värd en viss poäng, ex. ordet "Hello" är värt 8
+                poäng. "h" är värt 4 och resten av bokstäverna är värda 1 poäng.</p>
+            <p>
+                För att få reda på varje bokstavs poäng behöver du parse följande sträng:
+                <code>"xygkjjfzqfdmqvbyzemcvywkizxxvxmpgaxqzwthqbjjqjzjvhwpxzkudqrcxkqzphhzcszykbzflfjqqqonxjw"</code> varje
+                bokstav är med så många gånger som den är värd. "h" är med 4 gånger.
+                Skriv en funktion som tar emot en sträng och räknar ut dess poäng.
+        
+                <br><br>Extra: Funktionen ska även klara av multipliers, en lista med en multiplier för varje bokstav.
+                <code>"hello", [3, 1, 1, 1, 1]</code> ger 16 poäng.
+            </p>
+            <pre>
+        Test:
+        Input “hello” → 8, [3, 1, 1, 1, 1] → 16
+        Input “world” → 9, [1, 2, 1, 1, 2] → 12
+        Input “Maximize” → 28, [1, 1, 2, 1, 1, 1, 3, 1] → 56
+        Input “Flapjack” → 26, [1, 1, 1, 1, 1, 1, 1, 1] → 26
+                    </pre>
+        
+        
         </div>
+    
     </div>
 
     <script type="text/javascript" src="bundle.js"></script>

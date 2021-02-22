@@ -76,7 +76,7 @@
               font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
             .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
             </style>
-            <table class="tg">
+            <table class="tg" style="display:inline-block">
             <thead>
               <tr>
                 <th class="tg-c3ow"><p><b>Big O</b></P><br></th>
@@ -106,26 +106,7 @@
               </tr>
             </tbody>
             </table>
-        </div>
-
-
-
-        <div class="slide">
-            <h1>Exempel</h1>
-            <pre><code>N = 10
-big_sum = 0
-for index in range(N):
-    big_sum = big_sum + N * N
-</code></pre>
-        </div>
-
-        <div class="slide">
-            <h1>Exempel</h1>
-            <pre><code>N = 10000
-big_sum = 0
-for index in range(N):
-    big_sum = big_sum + N * N
-</code></pre>
+            <img style="display:inline-block" src="https://miro.medium.com/max/700/1*5ZLci3SuR0zM_QlZOADv8Q.jpeg">
         </div>
 
         <div class="slide">
@@ -146,37 +127,13 @@ random_list = random.sample(range(n * 10), n)</code></pre>
 
         <div class="slide">
             <h1>QuickSort</h1>
-            <pre><code>def quick_sort(items):
-    """ Quicksort """
-    if len(items) > 1:
-        pivot_index = len(items) // 2
-        smaller_items = []
-        larger_items = []
-
-        for i, val in enumerate(items):
-            if i != pivot_index:
-                if val < items[pivot_index]:
-                    smaller_items.append(val)
-                else:
-                    larger_items.append(val)
-
-        quick_sort(smaller_items)
-        quick_sort(larger_items)
-        items[:] = smaller_items + [items[pivot_index]] + larger_items
-
-    return items</code></pre>
+            <img src="https://files.realpython.com/media/Python_Sorting_Algorithms_-_Quick_Sort.ee6dbe24f0d3.jpeg " alt="">
         </div>
 
         <div class="slide">
             <h1>Algoritmanalys för en webbare</h1>
 
-            <p><em>Men Emil vad ska vi med detta?</em></p>
-        </div>
-
-        <div class="slide">
-            <h1>Algoritmanalys i ett exjobb</h1>
-
-            <p><a href="http://www.diva-portal.org/smash/get/diva2:838805/FULLTEXT01.pdf" target="_blank">Real-time Wind Direction Filtering for Sailboat Race Tracking</a></p>
+            <p><em>Men Andreas vad ska vi med detta?</em></p>
         </div>
     </div>
 

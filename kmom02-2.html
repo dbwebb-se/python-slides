@@ -14,7 +14,7 @@
     <div id="slide-container" class="slide-container">
         <div class="slide">
             <h1>kmom02 del 2</h1>
-            <p>Truthiness, Flow och Debugger</p>
+            <p>Truthiness, Try-Except och Flow</p>
         </div>
 
 
@@ -50,39 +50,50 @@
 
 
         <div class="slide">
-            <h1>Let's Code</h1>
-            <p>På temat flow control, truthiness, try-except, variablers roller.</p>
-            <p>Skapa ett program som räknar ut fakulteten för alla tal från 2 upp till och med en användares input.
-            </p>
+            <h1>Try-Except</h1>
         </div>
 
+        <div class="slide fade-in">
+            <ul>
+                <li>Syntax error</li>
+                <li>Runtime error/Exceptions</li>
+                <li>Semantic/Logic error</li>
+            </ul>
+        </div>
 
+        <div class="slide">
+                <pre><code style="font-size:20px;">try:
+    # try block
+    STATEMENTS
+except EXCEPTION:
+    # If exception run this code
+    STATEMENTS
+else:
+    # if no exception run this code
+    STATEMENTS
+finally:
+    # Always run this
+    STATEMENTS</code></code></pre>
+        </div>
 
         <div class="slide fade-in">
-            <h1>Allt-i-allo uppgift</h1>
+            <h1>Try-except uppgift</h1>
             <div data-time="10:00" class="timer"></div>
 
             <p>Skriv ett program som tar emot input från användaren. Beroende på inputens data typ gör en av två saker:<br><br>
             En sträng: Konkatenera ihop med tidigare stränger.<br>
             En siffra: Skriv ut den konkatenerade strängen det antal gånger, som siffran är.<br><br>
-            Tips: Använd <code>Try-except</code></p>
+            Ni får <b>inte</b> använda if-satser i koden. <b>Använd</b> <code>Try-except</code>.</p>
 
         </div>
 
 
 
         <div class="slide">
-            <h1>Debugger</h1>
-        </div>
-
-
-
-        <div class="slide fade-in">
-            <h1>Debugger-uppgift</h1>
-            <div data-time="10:00" class="timer"></div>
-
-            <p>Gör <code>dbwebb update</code> för att hämta hem senaste filerna till exampel mappen.</p>
-            <p>Använd debuggern på filen <code>example/lectures/2020/kmom02-2/debugger_assignment.py</code> för att förstå hur programmet fungerar.</p>
+            <h1>Let's Code</h1>
+            <p>På temat flow control, truthiness, try-except, variablers roller.</p>
+            <p>Skapa ett program som räknar ut fakulteten för alla tal från 2 upp till och med en användares input.
+            </p>
         </div>
 
 

@@ -12,99 +12,100 @@
     <div id="presentation" class="presentation"></div>
 
     <div id="slide-container" class="slide-container">
-        <div class="slide">
+        <div class="slide fade-in">
             <h1>kmom03</h1>
-            <p>Listor</p>
+            <p>Funktioner</p>
+            <pre><code>def NAME( LIST OF PARAMETERS ):
+                STATEMENTS</code></pre>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Argument / Parametrar</h1>
+
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Uppgift</h1>
+            <div data-time="10:00" class="timer"></div>
+
+            <p>Skapa en funktion <code>layer_cake()</code> som skriver ut en formaterat sträng med hjälp av <code>str.format()</code>.</p>
+
+            <p>Funktionen ska ta emot 4 argument: färg, 2 sorters fyllning och antal lager. Alla argument ska ha ett förifylld värde.</p>
+
+            <p>Anropa sedan funktionen med 0, 1, 2, 3 och 4 argument samt med bara sista argumentet (antal lager) med hjälp av <code>argument=värde</code></p>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Scope och moduler</h1>
+
         </div>
 
 
 
         <div class="slide">
-            <h1>Indexering</h1>
-            <!-- <img style="background-color:white;" src="img/list.png"> -->
-            <figure style="display: inline-block;">
-                <img style="background-color:white;width:600px" src="https://cdn.programiz.com/sites/tutorial2program/files/python-list-index.png">
-            </figure>
+            <h1>Moduler</h1>
+            <h2>Coupling & Cohesion</h2>
+            <h2>Single Responsibility Principle (SRP)</h2>
         </div>
 
 
-
-        <div class="slide fade-in">
-            <h1>Slices</h1>
-            <pre>
-instruments = ["Triangle", "Drums", "Accordion",
-                "Saxophone", "Banjo", "Guitar",
-                "Synthesizer", "Keyboard"]
-
-print(instruments[2:4])
-print(instruments[:4])
-print(instruments[-2:])
-print(instruments[:-1])
-print(instruments[::2])
-print(instruments[::-2])
-            </pre>
-        </div>
-
-
-
-        <div class="slide fade-in">
-            <h1>Listor uppgift</h1>
+        <div class="slide">
+            <h1>Moduler-uppgift</h1>
             <div data-time="10:00" class="timer"></div>
-
-            <p>Skriv ett program för att bjuda in folk till bio.</p>
-            <p>Programmet ska innehålla en lista där man kan lägga till nya människor som ska med.</p>
-            <p>När användaren skriver in "done" ska programmet skriva ut följande:</p>
-            <ul>
-                <li>Alla namn i listan</li>
-                <li>Vartannat namn i listan</li>
-                <li>De tre sista namnen</li>
-                <li>Namnen på index 2 och 3</li>
-            </ul>
+            <p>Fyll i</p>
         </div>
 
 
-
         <div class="slide fade-in">
-            <h1>Inbyggda funktioner</h1>
-            <p><a target="_blank" href="https://docs.python.org/3/tutorial/datastructures.html">Python3 docs Data Structures</a></p>
+            <h1>Retur värden</h1>
         </div>
 
+
         <div class="slide fade-in">
-            <h1>Listor uppgift 2</h1>
-            <div data-time="10:00" class="timer"></div>
-            <p>Fortsätt på koden från förra uppgiften. Det ska gå att vid input skicka in <code>extend:namn,namn,namn</code>, flera namn separerade med <code>,</code>, då ska strängen göras om till en lista, så varje namn blir ett eget element, och konkateneras med den existerande listan.</p>
-            <p>Lägg även till så att programmet kan skriva ut i vilket index ett namn har i listan. T.ex. <code>index Andreas</code>. Leta i dokumentationen för Listor på pythons hemsida för en funktion som kan användas.</p>
+            <h1>Funktioner i algebra</h1>
+            <img style="background-color:white;width:350px" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Function_machine2-sv.svg">
         </div>
 
 
 
         <div class="slide">
-            <h1>Sortera en Lista</h1>
-        </div>
-
-
-
-        <div class="slide fade-in">
-            <h1>Listor uppgift 3</h1>
+            <h1>return-uppgift</h1>
             <div data-time="10:00" class="timer"></div>
-
-            <p>Skapa en lista och fyll den men valfria siffror mellan 0 och 20. Använd sen random modulen för att slumpa fram två tal mellan 0 och 20.</p> <p>Använd <code>.index()</code> funktionen på din lista för att kolla om talen finns som värden i listan. Om de gör det byt plats på dem, annars skriv ut vilket/vilka av talen som inte finns i listan.</p>
+            <p>Skapa två funktioner, en funktion ska ta emot ett argument (en karaktär) och kolla om det är en versal. Om det inte är det ska den göra om den till en versal och returnera den.
+                Om det redan är en versal ska den göras om till en gemen och returneras. Lägg denna funktionen i en egen fil. Tips, använd <code>isupper()</code>, <code>upper()</code> och <code>lower()</code>.</p>
+            <p>
+                Den andra funktionen ska ta en input där användare kan skriva in ett meddelande. 
+                Meddelandet ska göras om så att versaler blir gemeners och gemenr blir versaler, använd den andra funktionen för att göra om varje bokstav, och sist skriva ut det omgjorda meddelandet till skärmen.
+                Lägg denna funktionen i en annan fil. I denna filen importera den första. Använd <code>if __name__ == "__main__"</code> för att anropa funktionen som startar programmet.
+            </p>
+            <p>
+                Ex: input: <code>"TjeNa MittBEna"</code> output: <code>"tJEnA mITTbeNA"</code>
+            </p>
         </div>
 
 
         <div class="slide fade-in">
             <h1>Praktisk problemlösning</h1>
-
-            <p>Skriv en funktion som tar emot en lista som innehåller heltal och en (1) nivå av nestlade listor, även dessa med heltal.</p>
-
-            <p>Iterera igenom listan och summera alla siffror i förälder listan. Varje gång du stöter på en barn lista summera siffrorna i denna och skriv ut barnlistans summa. Addera barnlistornas summa till förälderlistans totala summa.</p>
-
+        
+            <p>Skriv en funktion som tar emot en lista som innehåller heltal och en (1) nivå av nestlade listor, även dessa med
+                heltal.</p>
+        
+            <p>Iterera igenom listan och summera alla siffror i förälder listan. Varje gång du stöter på en barn lista summera
+                siffrorna i denna och skriv ut barnlistans summa. Addera barnlistornas summa till förälderlistans totala summa.
+            </p>
+        
             <p>Listor att testa med:</p>
             <pre>
-[1, 2, 3, 4]
-[1, 2, [6, 7, 8], 5, 7, 9]
-[[1, 2], [6, 7, 8], [5, 7, 9], [7, 9, 13], 2]
-            </pre>
+        [1, 2, 3, 4]
+        [1, 2, [6, 7, 8], 5, 7, 9]
+        [[1, 2], [6, 7, 8], [5, 7, 9], [7, 9, 13], 2]
+                    </pre>
         </div>
     </div>
 

@@ -2,6 +2,7 @@ import slideorama from "slideorama";
 
 import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
+import python from 'highlight.js/lib/languages/python';
 import cpp from 'highlight.js/lib/languages/cpp';
 import x86asm from 'highlight.js/lib/languages/x86asm';
 hljs.registerLanguage('x86asm', x86asm);

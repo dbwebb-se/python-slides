@@ -14,6 +14,13 @@ print(y)
 text = "Hello world!"
 print(text)
 
+# Multiline
+hello = """
+Hello
+World!
+"""
+print(hello)
+
 # bool (booleans)
 sun = False
 print(sun)
@@ -21,3 +28,4 @@ print(sun)
 a, b = 4, 2
 print(a)
 print(b)
+

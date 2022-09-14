@@ -22,6 +22,7 @@ if value:
     print(f"{value} is True\n")
 
 value = 0
-if not value:
+if value:
+    print(f"{value} is True\n")
+else:
     print(f"{value} is False\n")
-    

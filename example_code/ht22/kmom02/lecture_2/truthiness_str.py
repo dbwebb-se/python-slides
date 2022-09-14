@@ -11,7 +11,9 @@ if name:
     print(f"{name} is True\n")
 
 if empty_str:
-    print(f"The empty string {empty_str} is False this will not be printed.\n")
+    print(f"The empty string {empty_str} is False and this will not be printed.\n")
+else:
+    print(f"The empty string {empty_str} is False.\n")
 
 # Test with while-loop:
 while name:

@@ -85,8 +85,36 @@
 
 
         <div class="slide fade-in">
+            <h1>Lyft exception</h1>
+            <p>Exempel på hur fel kan lyftas:</p>
+            <p>
+                <code>
+                    raise IndexError("List index out of range!")
+                </code> 
+                <p>eller</p>
+                <code>
+                    raise ValueError # short for raise ValueError()
+                </code>               
+            </p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Lyft exception uppgift</h1>
+            <p>
+                Fortsätt på uppgiften med skorna. Du göra en funktion check_size(shoe_size) som omvandlar shoe_size till
+                en int och lyfter felet ValueError om: <br>
+                shoe_size är större än 48 med texten "The shoe size is too large"<br>
+                shoe_size är mindre än 32 med texten "The shoe size is too small"
+            </p>
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+
+
+        <div class="slide fade-in">
             <h1>Praktisk problemlösning</h1>
-            <p>Emil och Andreas ska på AfterWork där de ska spela golf. Självklart måste resultatet digitaliseras i ett Python-program.</p>
+            <p>Marie och Andreas ska på AfterWork där de ska spela golf. Självklart måste resultatet digitaliseras i ett Python-program.</p>
 
             <p>Skapa ett program där en dictionary används för att spara information om spelare. Spelare kan läggas in med handicap och sedan kan resultatet på varje håll läggas in i en lista av tuples efterhand som spelet fortgår.</p>
 

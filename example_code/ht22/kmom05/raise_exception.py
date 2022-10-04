@@ -2,7 +2,7 @@
 Raise an exception when list is accessed out of range
 """
 
-numbers = [ 1, 2, 3, 4]
+NUMBERS = [ 1, 2, 3, 4]
 
 def print_number(a_list, index):
     """ 

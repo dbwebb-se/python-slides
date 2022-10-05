@@ -36,20 +36,26 @@ if __name__ == "__main__":
        "krossade tomater": { "stock" : 33, "ids" : (4224, "E13") },
        "gul lök" : { "stock" : 42, "ids" : (2742, "D02") }
     }
+    print("\nPrintouts from warehouse_deluxe")
     print(warehouse_deluxe["köttfärs"])
     print(warehouse_deluxe["köttfärs"]['stock'])
     print(warehouse_deluxe["köttfärs"]['ids'][1])
-    #for key, value in warehouse_deluxe.items():
-        #print(key, value)
-        #print(f"Det finns {value["stock"]} stycken {key} kvar.")
-        #print(f"Det finns {value['stock']} stycken {key} kvar.")
-
-    #print("\nPriset på köttfärs:")
-    #print(warehouse_deluxe["köttfärs"]["ids"][0])
-    #print(prices_dict[warehouse_deluxe["köttfärs"]["ids"][0]])
+    for key, value in warehouse_deluxe.items():
+        print(key, value)
+        print(f"Det finns {value["stock"]} stycken {key} kvar.")
+        print(f"Det finns {value['stock']} stycken {key} kvar.")
+        
+    print("\nSort prices")
+    print(sorted(prices_dict.items()))
+    print("Sort prices on values")
+    print(sorted(prices_dict.items(), key=itemgetter(1)))
+    print(sorted(prices_dict.items(), key=itemgetter(1), reverse=True))
     
-    #print("Testa id_to_key")
-    #print(id_to_key(warehouse_deluxe["köttfärs"]["ids"][0], warehouse_deluxe))
+    print("\nPrice:")
+    print(warehouse_deluxe["köttfärs"]["ids"][0])
+    print(prices_dict[warehouse_deluxe["köttfärs"]["ids"][0]])
     
-    #print(f"{warehouse_deluxe[0]} finns på hyllplats {warehouse_deluxe[0]['ids'][1]} och det finns {warehouse_deluxe[0]['stock']} kvar.")
-    #sort_by_price(prices_dict, warehouse_deluxe)
+    print("Testa id_to_key")
+    print(id_to_key(warehouse_deluxe["köttfärs"]["ids"][0], warehouse_deluxe))
+    
+    sort_by_price(prices_dict, warehouse_deluxe)

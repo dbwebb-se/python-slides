@@ -6,25 +6,80 @@
     <title>kmom02</title>
 
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python.css" />
 </head>
 <body>
     <div id="presentation" class="presentation"></div>
 
     <div id="slide-container" class="slide-container">
+        <div class="slide">
+            <h1>kmom02 Testning del 1</h1>
+            <p>Tester och testmetoder</p>
+        </div>
+
+
+
+        <div class="slide">
+            <h1>Vad är testning?</h1>
+            <ul>
+                <li>validera programmets funktionalitet.</li>
+                <li>identifiera defekter i programmet.</li>
+            </ul>
+        </div>
+
+
+        <div class="slide">
+            <h1>Skillnad testning och debugging?</h1>
+            <ul>
+                <li>Debugging - hitta felen i vår kod under utveckling genom att kolla värden på variabler och flödet i koden</li>
+                <li>Testning - att skriva kod som verifierar vår koden funktionalitet</li>
+            </ul>
+        </div>
+
+
+
+        <div class="slide">
+            <h1>Varför testning?</h1>
+            <ul>
+                <li>programmet funkar om testerna går rätt, vilket är ett kvalitetsbevis</li>
+                <li>underlättar vid underhåll/uppdatering av koden</li>
+                <li>testprogrammet kan köras om och om igen och schemaläggas</li>
+                <li>skriva ut fina rapporter</li>
+            </ul>
+        </div>
+
+
+        <div class="slide">
+            <h1>Olika nivåer av testning</h1>
+            <ul>
+                <li>Enhetstest, varje enhet testas för sig</li>
+                <li>Intgrationstest, testar om enheterna funkar ihop</li>
+                <li>Systemtest, testar hela systemet</li>
+                <li>Acceptanstest, kunden testar programmet för att kunna godkänna det</li>
+            </ul>
+        </div>
 
         <div class="slide fade-in">
-            <h1>Uppgift: Rektangle och kvadrat</h1>
-
-            <p>Skapa en klass som representerar en rektangle. Ge den två privata attribut <code>length</code> och <code>height</code>.</p>
-            <p>Ge den också en metod med namnet <code>area</code>, den ska räkna ut och returnera arean.</p>
-
-            <p>Skapa en klass som representerar en kvadrat och ärver från rektangle. Kvadratens konstruktor ska bara ta ett argument, längden för sidorna <code>side_length</code>.</p>
-
-            <p>Skapa några rektangle och kvadrat objekt och att de funkar som de ska.</p>
-
-            <div data-time="10:00" class="timer"></div>
+            <h1>Enhetstest</h1>
+            <ul>
+                <li>Ofta används ett testramverk, i vårt fall unittest  </li>
+                <li>Testklass som testar en klass</li>
+                <li>Testmetoder</li>
+            </ul>
         </div>
-    <script type="text/javascript" src="slider.js"></script>
+
+
+        <!-- <div class="slide fade-in">
+            <h1>Let's Code Uppgift</h1>
+            <p>Skriv ett program som tar emot tre stycken input.</p>
+            <p>Först ska programmet ta emot ett ord.</p>
+            <p>Sedan ska programmet i två omgångar ta emot ett heltal.</p>
+            <p>Skriv sedan ut med hjälp av en <code>for</code>-loop delsträngen mellan dina två siffror.</p>
+            <p>Använd <code>if</code>-satser för att kolla att dina två heltal hamnar inom strängens längd. Använd <code>try-except</code> för att kolla att vi får in rätt värden.</p>
+        </div> -->
+
+    </div>
+
+    <script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>

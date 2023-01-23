@@ -6,7 +6,7 @@
     <title>kmom02</title>
 
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="python.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div id="presentation" class="presentation"></div>
@@ -19,7 +19,7 @@
 
 
 
-        <div class="slide">
+        <div class="slide fade-in">
             <h1>Vad är testning?</h1>
             <ul>
                 <li>validera programmets funktionalitet</li>
@@ -28,21 +28,22 @@
         </div>
 
 
-        <div class="slide">
+        <div class="slide fade-in">
             <h1>Skillnad testning och debugging?</h1>
             <ul>
                 <li>Debugging - hitta felen i vår kod under utveckling genom att kolla värden på variabler och flödet i koden t ex med Thonny</li>
-                <li>Testning - att skriva kod som verifierar vår koden funktionalitet</li>
+                <li>Testning - att skriva kod som verifierar vår kods funktionalitet</li>
             </ul>
         </div>
 
 
 
-        <div class="slide">
+        <div class="slide fade-in">
             <h1>Varför testning?</h1>
             <ul>
                 <li>Ett kvalitetsbevis, programmet funkar om testerna går rätt </li>
                 <li>Underlättar vid underhåll/uppdatering av koden</li>
+                <li>Underlättar vid refaktorering</li>
                 <li>Testprogrammet eller enstaka tester kan köras om och om igen</li>
                 <li>Testprogrammet kan schemaläggas</li>
                 <li>Skriver ut fina rapporter</li>
@@ -50,7 +51,7 @@
         </div>
 
 
-        <div class="slide">
+        <div class="slide fade-in">
             <h1>Olika nivåer av testning</h1>
             <ul>
                 <li>Enhetstest, varje enhet testas för sig</li>
@@ -61,13 +62,12 @@
         </div>
 
 
-        <div class="slide">
+        <div class="slide fade-in">
             <h1>Olika typer av testning</h1>
             <ul>
                 <li>GUI, användargränsnittet</li>
                 <li>Blackbox, okänd kod</li>
-                <li>Whitebox, koden är kändt</li>
-                <li>Acceptanstest, kunden testar programmet för att kunna godkänna det</li>
+                <li>Whitebox, koden är känd</li>
             </ul>
         </div>
 
@@ -92,21 +92,68 @@
 
         <div class="slide fade-in">
             <h1>Assertmetoder</h1>
-            <img src="img/eshopStart.png" title="startsida eshop" style="width: 80%;padding-top:1em;">
+            <img src="img/assert_methods1.png" title="assert methods" style="width: 90%;padding-top:1em;">
         </div>
 
 
-        <!-- <div class="slide fade-in">
-            <h1>Let's Code Uppgift</h1>
-            <p>Skriv ett program som tar emot tre stycken input.</p>
-            <p>Först ska programmet ta emot ett ord.</p>
-            <p>Sedan ska programmet i två omgångar ta emot ett heltal.</p>
-            <p>Skriv sedan ut med hjälp av en <code>for</code>-loop delsträngen mellan dina två siffror.</p>
-            <p>Använd <code>if</code>-satser för att kolla att dina två heltal hamnar inom strängens längd. Använd <code>try-except</code> för att kolla att vi får in rätt värden.</p>
-        </div> -->
+        <div class="slide fade-in">
+            <h1>Assertmetoder fortsättning</h1>
+            <img src="img/assert_methods2.png" title="assert methods" style="width: 90%;padding-top:1em;">
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Assertmetoder fortsättning</h1>
+            <img src="img/assert_methods3.png" title="assert methods" style="width: 90%;padding-top:1em;">
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Tänk på när du gör testfall</h1>
+            <ul>
+                <li>Minst 1 testklass per klass </li>
+                <li>Testerna ska gå att upprepa</li>
+                <li>Testerna ska vara oberoende</li>
+                <li>Ingen I/O i testkoden</li>
+                <li>Både positiva och negativa testfall</li>
+                <li>Testa all funktionalitet</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Tänk på när du gör testfall fortsättning</h1>
+            <ul>
+                <li>Testa “alla” möjliga flöden i koden </li>
+                <li>Testerna ska gå att upprepa</li>
+                <li>Testa felaktiga värden</li>
+                <li>Testa randvillkor (edge cases)</li>
+                <li>Hellre flera testfall än många assert i samma metod</li>
+                <li>Ersätt slumpade värden med valda värden, seed</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Att skriva ett testfall</h1>
+            <ol>
+                <li>Arrange, förbered inför testfallet</li>
+                <li>Act, gör ditt test</li>
+                <li>Assert, validera utfallet av ditt test</li>
+            </ol>
+        </div>
+
+        
+        <div class="slide fade-in">
+            <h1>Kodning del 2</h1>
+            <p>
+                Vi ska göra testfall på bankklassen.
+            </p>
+        </div>
+
 
     </div>
 
-    <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript" src="slider.js"></script>
 </body>
 </html>

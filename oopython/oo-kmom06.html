@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>kmom02</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="presentation" class="presentation"></div>
+
+    <div id="slide-container" class="slide-container">
+        <div class="slide">
+            <h1>kmom06 Sorteringsalgoritmer & Datastrukturer</h1>
+            <p>Sorteringsalgoritmer & rekursion</p>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Sorteringsalgoritmer</h1>
+            <ul>
+                <li>Viktigt att förstå algoritmerna</li>
+                <li>Viktigt att jobba igenom algoritmerna</li>
+                <li>Bubble sort, Selection sort & Insertion sort</li>
+                <li>Tidskomplexitet (Ordo eller Big-O)</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Bubble sort</h1>
+            <ul>
+                <li>Hur sorterar vi människor?</li>
+                <li>Hur sorterar datorn?</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Bubble sort</h1>
+            <ul>
+                <li>Iterera från vänster till höger</li>
+                <li>För varje loop "bubbla" det största elementet i paret åt höger</li>
+                <li>Upprepa tills alla element bubblat färdigt</li>
+            </ul>
+            <p>Kod i Thonny</p>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Selection sort, Urvalsortering</h1>
+            <ul>
+                <li>Leta upp minsta talet</li>
+                <li>Byt plats på första talet och minsta talet</li>
+                <li>Sök i resten av listan efter det näst minsta talet och lägg det andra
+                    positionen osv.</li>
+            </ul>
+            <p>Visa på tavlan</p>
+        </div>
+
+        
+        <div class="slide fade-in">
+            <h1>Uppgift: Implementera selection sort</h1>
+            <p>Tips</p>
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Selection sort</h1>
+            <p>Kod i Thonny</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>PAUS</h1>
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Tidskomplexitet</h1>
+            <ul>
+                <li>Ordo eller Big-O, värsta fallet</li>
+                <li>Ett teoriskt mått på hur effektiv en algoritm är</li>
+                <li>Faktorer som påverkar: loopar, antal gånger en rekursiv funktion anropar sig själv</li>
+                <li>Tidskomplexitet säger ingenting om hur lång tid det tar att köra algoritmen!</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Tidskomplexitet</h1>
+            <ul>
+                <li>Kvadratisk tidskomplexitet O(n*n), (Bubble sort, Selection sort)</li>
+                <li>Om 1 n tar 10 s, så tar O(n*n) 100 s</li>
+                <li>Om 1000 n tar 17 min, så tar O(n*n) 12 dygn</li>
+            </ul>
+            <p>Visa hur jag mäter i Thonny???</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Insertion sort, Insättningssortering</h1>
+            <ul>
+                <li>bra att använda om man får värdena ett och ett, kanske genom att läsa från en fil och vill sortera dem</li>
+                <li>Dela upp i sorterad och en osorterad del</li>
+                <li>Värdena från den osorterade delen stoppas in på rätt plats genom att flytta värdena i den sorterade delen ett snäpp åt höger</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Insertion sort, Insättningssortering</h1>>
+            <p>Visa på tavlan och i Thonny</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Tips sorteringsalgoritmer</h1>
+            <ul>
+                <li>Thonny</li>
+                <li>Kortlek</li>
+                <li>Visualgo - visa</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Definition av rekursiv funktion</h1>
+            <ul>
+                <li>Basfall (stopp)</li>
+                <li>Ändrar sitt tillstånd och jobbar mot basfallet</li>
+                <li>Kallar på sig själv</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Rekursion - fördelar</h1>
+            <ul>
+                <li>Renare kod</li>
+                <li>Komplex uppgift bryts ner i små problem</li>
+                <li>Ovärderlig vid rätt tillfälle</li>
+            </ul>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Rekursion - nackdelar</h1>
+            <ul>
+                <li>Mer minne</li>
+                <li>Ofta långsammare</li>
+                <li>Svårare att debugga</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Torn med klossar</h1>
+            <ul>
+                <li>Skriv ut färgerna på klossarna, understa först</li>
+                <li>Leta upp den understa klossen => vårt basfall</li>
+                <li>Lyft klossar => Ändrar tillstånd</li>
+                <li>Funktionen funkar för 3 klossar, 2 klossar och kan anropa sig själv</li>
+            </ul>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Torn med klossar</h1>>
+            <p>Visa på tavlan och i Thonny</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>PAUS</h1>
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Exempel rekursion</h1>
+            <ul>
+                <li>Längden på en lista</li>
+                <li>Hitta alla vokaler i en sträng</li>
+            </ul>
+            <p>Visa i Thonny</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Datastrukturer</h1>
+            <ul>
+                <li>Kö (Queue), linjär datastruktur, FIFO</li>
+                <li>Stack, linjär datastruktur, LIFO</li>
+                <li>Länkad lista (UnorderedList), linjär datastruktur</li>
+            </ul>
+            <p>Visa på tavlan</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Kodxempel rekursion</h1>
+            <ul>
+                <li>Stack</li>
+                <li>UnorderedList</li>
+            </ul>
+            <p>Visa i Thonny</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Merge sort</h1>
+            <ul>
+                <li>Dela upp listan med tal i lika stora smålistor av längden 1</li>
+                <li>Slå ihop listorna parvis sorterade</li>
+                <li>Upprepa förra steget tills det bara finns en lista kvar</li>
+                <li>Gå igenom exemplet i uppgiften</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>PageRank</h1>
+            <ul>
+                <li>Googles algoritm för att ranka viktiga webbsidor</li>
+                <li>Antalet länkar till och från en webbsida</li>
+                <li>Länkarna viktas efter förtroende, en länk från Regeringen.se har högre
+                    pagerank än en slumpmässig sida.</li>
+            </ul>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Avslutning</h1>
+            <ul>
+                <li>Genomgång av kmom05</li>
+                <li>Sorteringsalgoritmer (Bubble sort, Selection sort, Insertion sort)</li>
+                <li>Rekursion (Listor, Stack, UnsortedList, Merge sort)</li>
+            </ul>
+            <h2>Lycka till med kmom06!</h2>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="slider.js"></script>
+</body>
+</html>

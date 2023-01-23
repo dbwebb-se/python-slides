@@ -1,0 +1,131 @@
+Bootstrap grid
+https://bootstrap-cheatsheet.themeselection.com/
+https://getbootstrap.com/docs/4.2/layout/grid/
+
+Jumbotron -flashig rubrik
+<div class="jumbotron">
+    <h1>Om sida</h1>
+</div>
+
+well bra container
+text-left, well-sm
+<footer class="well text-center">
+    <div>
+        <p>&copy; 2022 Marie's programming Ltd. </p>
+    </div>
+</footer>
+
+Ändra till container
+<div class="container">
+
+Ändra till row
+<div class="row">
+
+Ändra bredden på kolumnen, lg 992px, md 768 px
+<div class="row col-lg-8">
+<div class="row col-lg-2">
+
+Flytta kolumnen lite till höger
+col-lg-8 col-lg-offset-1
+
+Gör en rad av mitt namn
+<div class="row col-lg-8 col-lg-offset-1">
+    <p>Jag heter {{ name }} och det här är kursen {{ course }}.</p>
+</div>
+
+Gör 2 kolumner av resten
+<div class="row col-lg-8 col-lg-offset-1">
+    <div class="col-lg-6">
+        <img src="{{ url_for('static',filename='img/leaf_256x256.png') }}" width="256">
+    </div>
+    <div class="col-lg-6">
+        <h4>Car information: </h4>
+        <p> {{ car_info }} </p>
+    </div>
+</div>
+
+Flask GET, about.html
+<h4>Question: </h4>
+<p> {{ car_info }} </p>
+<p> How many wheels does a car have? </p>
+<input type="radio" name="wheels" value="3"><b> 3</b>
+<input type="radio" name="wheels" value="4"><b> 4</b>
+<input type="radio" name="wheels" value="5"><b> 5</b>
+
+Skriv ut session, i app.py
+print(session)
+=> Fel
+Importera session: from flask import Flask, render_template, session
+=> Ok
+session["test"] = "Testing!"
+=> Fel, secret key saknas
+Lägg till den:
+app.secret_key = re.sub(r"[^a-z\d]", "", os.path.realpath(__file__))
+Och importera:
+import os
+import re
+=> Se "Testing!" i flasksessionen i terminalfönstret
+
+Hämta från session, app.py
+if session.get("test"):
+    session["test"] = "No testing!"
+else:
+    session["test"] = "Testing!"
+=> Se "No testing!" i flasksessionen i terminalfönstret
+
+Rensa i session, app.py
+@app.route("/reset")
+def reset():
+    """ Route for reset session """
+    session.pop("test")
+
+    return redirect(url_for('about'))
+Importera: , redirect, url_for
+
+Utöka navbaren header.html
+<li {%- if request.path == "/reset" %} class="active" {% endif %}><a href="{{ url_for('reset') }}">Reset</a></li>
+=> Se "Testing!" och flera "No testing!" i flasksessionen i terminalfönstret
+Välj Reset och det börjar om.
+
+Flask GET, about.html
+<h4>Question: </h4>
+<p> How many wheels does a car have? </p>
+<input type="radio" name="wheels" value="3"><b> 3</b>
+<input type="radio" name="wheels" value="4"><b> 4</b>
+<input type="radio" name="wheels" value="5"><b> 5</b>
+
+Spara värdet från checkboxen dvs requesten i session.
+if request.form.get("wheels") :
+    session["wheels"] = request.form.get("wheels")
+=> Fel
+Importera även request
+=> Ok
+Session tom.
+Lägg till , methods=["POST", "GET"] på routen /about
+=> Fel
+Formulär saknas. Gör ett.
+<form role="form" id="quiz" method="GET" action="{{ url_for('about') }}">
+    <label for="quiz" class="form-label">How many wheels does a car have?</label>
+    <input type="radio" name="wheels" value="3"><b> 3&nbsp;</b>
+    <input type="radio" name="wheels" value="4"><b> 4&nbsp;</b>
+    <input type="radio" name="wheels" value="5"><b> 5</b>
+    <button type="submit" class="btn btn-success btn-lg btn-block">Answer</button>
+</form>
+=> Inget händer. Ändra method="POST"
+
+Lägg till ägare:
+ny kolumn i about.html
+<div class="col-lg-3">
+    <form role="form" id="owner" method="POST" action="{{ url_for('about') }}">
+        <label for="quiz" class="form-label">Add owner</label>
+        <div class="form-group">
+            <label for="firstname">First name: </label>
+            <input type="text" name="firstname" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last name: </label>
+            <input type="text" name="lastname" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-default">Add</button>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>Salary</th>
+            <th>Days Hired</th>
+        </tr>
+    </thead>
+<tbody>
+    {% for person in people %}
+    <tr>
+        <td>{{ person.get_name() }}</td>
+        <td>{{ person.get_id() }}</td>
+        <td>{{ person.get_salary() }}</td>
+        <td>{{ person.get_days_hired() }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>

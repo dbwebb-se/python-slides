@@ -7,7 +7,7 @@ from src.account import Account
 
 class TestAccount(unittest.TestCase):
     """ Submodule for unittests, derives from unittest.TestCase """
-    
+
     def setUp(self):
         """ Setup that runs before every testcase """
         random.seed("account")
@@ -19,19 +19,27 @@ class TestAccount(unittest.TestCase):
         self.assertNotEqual(my_account.owner, "Andreas") # Assert
         self.assertIsInstance(my_account, Account) # Assert
         self.assertIsNotNone(my_account.name, "Account name should not be empty") # Assert
-    
+
+    def test_create_2_accounst_ok(self):
+        """ Test if the second account has different account number from the first one. """
+        my_account = Account(10000, "löning", "Marie") # Act
+        my_account2 = Account(500, "välgörenhet", "Marie") # Act
+        self.assertNotEqual(my_account.number, my_account2.number) # Assert
+
     def test_withdraw_ok(self):
         """ Test if withdraw works """
         my_account = Account(10000, "löning", "Marie") # Act
         res = my_account.withdraw(1000)
-        self.assertEqual(my_account.get_balance(), 9000, "Balance after withdraw should be 9000") # Assert
+        self.assertEqual(my_account.get_balance(), 9000, \
+            "Balance after withdraw should be 9000") # Assert
         self.assertTrue(res, "Should be true since ok withdraw") # Assert
 
     def test_withdraw_not_ok(self):
         """ Test if withdraw work when too large amount is withdrawn """
         my_account = Account(10000, "löning", "Marie") # Act
         res = my_account.withdraw(99000)
-        self.assertEqual(my_account.get_balance(), 10000, "Balance the same, 10000, since not ok withdraw") # Assert
+        self.assertEqual(my_account.get_balance(), 10000, \
+            "Balance the same, 10000, since not ok withdraw") # Assert
         self.assertFalse(res, "Should be false since try to withdraw more than on account") # Assert
 
     def test_add_method_with_object_ok(self):

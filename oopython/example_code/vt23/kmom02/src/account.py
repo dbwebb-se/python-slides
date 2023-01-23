@@ -13,7 +13,7 @@ class Account:
         self.name = name
         self.owner = owner
         self.number = random.randint(1000000, 20000000)
-    
+
     def withdraw(self, amount):
         if self._balance >= amount:
             self._balance -= amount
@@ -25,36 +25,35 @@ class Account:
             self._balance += amount
             return True
         return False
-    
+
     def transfer(self, amount, other_account):
         if self.withdraw(amount):
             if other_account.deposit(amount):
                 return True
-            else:
-                self.deposit(amount)
-                return False
+            self.deposit(amount)
+            return False
         return False
 
     @staticmethod
     def calc_interest(amount):
         return Account.interest * amount
-    
+
     def get_balance(self):
         return self._balance
-    
+
     def __add__(self, other):
         if isinstance(other, str):
             return self.name + other
-        elif isinstance(other, int):
+        if isinstance(other, int):
             return self._balance + other
-        else:
-            return self._balance + other.get_balance()
+        return self._balance + other.get_balance()
 
     def __sub__(self, other):
         if isinstance(other, Account):
             return self._balance - other.get_balance()
-        elif isinstance(other, int):
+        if isinstance(other, int):
             return self._balance - other
+        return None
 
     def __iadd__(self, other):
         self._balance += other.get_balance()

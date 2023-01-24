@@ -12,15 +12,28 @@ class TestAccount(unittest.TestCase):
         """ Setup that runs before every testcase """
         random.seed("account")
 
-    def test_create_account_ok(self):
-        """ Test if the account is created with its data """
+    def test_create_account_owner_ok(self):
+        """ Test if the account is created and owner is correct """
         my_account = Account(10000, "löning", "Marie") # Act
-        self.assertEqual(my_account.number, 7133616, "Check account number") # Assert
+        self.assertEqual(my_account.owner, "Marie", "Check owner is Marie") # Assert
         self.assertNotEqual(my_account.owner, "Andreas") # Assert
+
+    def test_create_account_instance_ok(self):
+        """ Test if the account is created and if it is the correct instance """
+        my_account = Account(10000, "löning", "Marie") # Act
         self.assertIsInstance(my_account, Account) # Assert
+
+    def test_create_account_name_ok(self):
+        """ Test if the account is created and name is correct """
+        my_account = Account(10000, "löning", "Marie") # Act
         self.assertIsNotNone(my_account.name, "Account name should not be empty") # Assert
 
-    def test_create_2_accounst_ok(self):
+    def test_create_account_number_ok(self):
+        """ Test if the account is created and account number is set ok """
+        my_account = Account(10000, "löning", "Marie") # Act
+        self.assertEqual(my_account.number, 7133616, "Check account number") # Assert
+
+    def test_create_2_accounts_ok(self):
         """ Test if the second account has different account number from the first one. """
         my_account = Account(10000, "löning", "Marie") # Act
         my_account2 = Account(500, "välgörenhet", "Marie") # Act

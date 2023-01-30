@@ -1,43 +1,27 @@
 #!/usr/bin/env python3
 import traceback
-import os
-import re
 from src.account import Account
 from src.owner import Owner
-from flask import Flask, render_template, session, url_for, redirect
+from flask import Flask, render_template
 
 app = Flask(__name__)
-app.secret_key = re.sub(r"[^a-z\d]", "", os.path.realpath(__file__))
 
 @app.route("/")
 def main():
     return render_template("index.j2")
 
-@app.route("/init", methods=["GET"])
-def init():
-    """ Intialize values needed in session """
-    session["greeting"] = "Välkommen"
-
-    return redirect(url_for('show_accounts'))
-
-@app.route("/show-accounts", methods=["GET"])
+@app.route("/show-accounts")
 def show_accounts():
-    greet = session["greeting"]
     andreas = Owner("Andreas", "933838339", "BTH")
     a1 = Account(100, "räntor", andreas)
     a2 = Account(35, "aktier", andreas)
     a3 = Account(5050, "pension", andreas)
     andreas.accounts.extend([a1, a2, a3])
 
-    return render_template("show_accounts.j2", owner=andreas, greet=greet)
 
-@app.route("/reset")
-def reset():
-    """ Route for reset session """
-    _ = [session.pop(key) for key in list(session.keys())]
-    session["greeting"] = "Välkommen"
+    return render_template("show_accounts.j2", owner=andreas)
 
-    return redirect(url_for('main'))
+
 
 @app.errorhandler(404)
 def page_not_found(e):

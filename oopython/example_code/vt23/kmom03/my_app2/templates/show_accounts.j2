@@ -1,0 +1,30 @@
+{% include "header.j2" %}
+
+<div class="container-fluid" role="main">
+    <div class="jumbotron">
+        <h1>{{ greet }} till banken!</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+            <div>
+                <h2>Ägare</h2>
+                <p>{{ owner.name + "-" + owner.ssn }}</p>
+                <p>{{ owner.ssn }}</p>
+                <p>{{ owner.adress }}</p>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h2>Konton</h2>
+            {% for account in owner.accounts %}
+                <div>
+                    <p>Kontonamn: {{ account.name }}</p>
+                    <p>Kontonummer: {{ account.number }}</p>
+                    <p>Saldo: {{ account.get_balance() }}</p>
+                    <br>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% include "footer.j2" %}

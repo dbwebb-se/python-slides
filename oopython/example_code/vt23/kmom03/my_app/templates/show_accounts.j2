@@ -1,0 +1,23 @@
+{% include "header.j2" %}
+
+<div>
+    <div>
+        <h2>Ägare</h2>
+        <p>{{ owner.name + "-" + owner.ssn }}</p>
+        <p>{{ owner.ssn }}</p>
+        <p>{{ owner.adress }}</p>
+    </div>
+    <div>
+        <h2>Konton</h2>
+        {% for account in owner.accounts %}
+            <div>
+                <p>{{ account.name }}</p>
+                <p>{{ account.number }}</p>
+                <p>{{ account.get_balance() }}</p>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include "footer.j2" %}

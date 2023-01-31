@@ -11,14 +11,9 @@ app.secret_key = re.sub(r"[^a-z\d]", "", os.path.realpath(__file__))
 
 @app.route("/")
 def main():
-    return render_template("index.j2")
-
-@app.route("/init", methods=["GET"])
-def init():
-    """ Intialize values needed in session """
     session["greeting"] = "Välkommen"
 
-    return redirect(url_for('show_accounts'))
+    return render_template("index.j2")
 
 @app.route("/show-accounts", methods=["GET"])
 def show_accounts():
@@ -35,7 +30,6 @@ def show_accounts():
 def reset():
     """ Route for reset session """
     _ = [session.pop(key) for key in list(session.keys())]
-    session["greeting"] = "Välkommen"
 
     return redirect(url_for('main'))
 
@@ -57,4 +51,4 @@ def internal_server_error(e):
     return "<p>Flask 500<pre>" + traceback.format_exc()
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5002)

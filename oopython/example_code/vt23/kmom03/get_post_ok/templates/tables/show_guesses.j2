@@ -1,0 +1,24 @@
+{# <h4>Mina gamla gissningar</h4> #}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Mina gamla gissningar</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Värde</th>
+                    <th>Försök</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for guess in game.guesses %}
+                <tr>
+                    <td>{{ guess.value }}</td>
+                    <td>{{ guess.attempt }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

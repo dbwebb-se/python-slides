@@ -18,27 +18,69 @@
         </div>
 
 
-
         <div class="slide">
-            <h1>Repetition</h1>
+            <h1>Repetition - testning del 1</h1>
             <ul>
-                <li>Kvalitetssäkring av programmet.</li>
-                <li>Underlättar vid underhåll/uppdatering av programmet.</li>
-                <li>Enhetstest, testar en enhet t ex funktion.</li>
+                <li>Kvalitetssäkring av programmet</li>
+                <li>Underlättar vid underhåll/uppdatering/refaktorering</li>
+                <li>Enhetstest, testar en enhet t ex funktion</li>
+                <li>Testprogrammet kan köras om och om igen och schemaläggas</li>
+                <li>Testprogrammet kan </li>
+                <li>Assertmetoder validerar resultatet i testmetoden </li>
             </ul>
         </div>
 
 
+        <div class="slide fade-in">
+            <h1>Testdriven utveckling</h1>
+            <p>Test Driven development (TDD)</p>
+            <img src="img/tdd_cycle.png" title="TDD" style="width: 90%;padding-top:1em;">
+            <pre>Källa: ISD part of intergroup</pre>
+        </div>
 
 
+        <div class="slide fade-in">
+            <h1>Beteendedriven utveckling</h1>
+            <p>Behavior Driven development (BDD)</p>
+            <p>BDD-cykeln är mycket lik TDD-cykeln. Vi börjar med att skapa ett acceptanstest, 
+                sedan skriver vi kod som som gör att testet blir godkänt. Vi upprepar denna 
+                cykel tills produkten är klar.
+            </p>
+        </div>
         
 
         <div class="slide fade-in">
-            <h1>Att skriva ett testfall</h1>
+            <h1>Skillnad TDD och BDD, klass</h1>
+            <img src="img/counter.png" title="klassen Counter" style="width: 90%;padding-top:1em;">
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Skillnad TDD och BDD, testfall</h1>
+            <p></p>
+            <img src="img/tdd.png" title="Skillnad TDD & BDD" style="width: 49%;height:200px;">
+            <img src="img/bdd.png" title="Skillnad TDD & BDD" style="width: 49%;height:200px;">
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Att skriva en story, BDD</h1>
             <ol>
-                <li>Arrange, förbered inför testfallet</li>
-                <li>Act, gör ditt test</li>
-                <li>Assert, validera utfallet av ditt test</li>
+                <li>Som en [Roll] </li>                   
+                <li>Vill jag kunna [Funktion] </li>
+                <li>Så att jag kan göra/få [Nytta] </li>
+            </ol>
+            <p><i>Som</i> en användare <i>Vill jag kunna</i> logga in med användarnamn och 
+                lösenord <i>Så att jag kan</i> komma åt systemet. </p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Att skriva ett testfall BDD</h1>
+            <ol>
+                <li>Arrange (given, givet), förbered inför testfallet</li>
+                <li>Act (when, då), gör ditt test</li>
+                <li>Assert (then, när), validera utfallet av ditt test</li>
             </ol>
         </div>
 

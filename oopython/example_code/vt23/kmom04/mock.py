@@ -7,13 +7,14 @@ from unittest import mock
 
 # Vi kan antingen skapa ett Mock eller MagicMock objekt.
 # För att använda Mock objektet behöver vi i förväg specificera vilka attribut
-# och metoder som ska ersättas och hur de ska betee sig.
+# och metoder som ska ersättas och hur de ska bete sig.
 # MagicMock däremot är mer automatisk/magisk, det objektet har vissa metoder förskapade.
 
 # MagicMock är en subklass till Mock. Objekt skapar attribut och metoder
 # när de används på objektet och sparar hur de har använts. Det går även
 # att konfigurera dem för att sätta retur värden och assert:a hur de har använts
 m = mock.MagicMock()
+type(m)
 # Om anropar m som en funktion ska den returnera "magic"
 m.return_value = "magic"
 
@@ -52,9 +53,11 @@ def raise_exception():
     """
     raise ValueError()
 
+m.side_effect = raise_exception
+print(m())
+# ValueError och iterationsfel
 m.chaos = raise_exception
-# m.chaos()
-# ValueError
+print(m())
 
 
 

@@ -30,3 +30,13 @@ if __name__ == '__main__':
     }
     runner = HTMLTestRunner(**kwargs)
     runner.run(TestSuite([account_magic_tests]))
+
+    kwargs = {
+        "verbosity": 2,
+        "output": "test_owner",
+        "report_name": "my_report_owner",
+        "report_title": "Testing TestOwner",
+        "failfast": False
+    }
+    runner = HTMLTestRunner(**kwargs)
+    runner.run(TestSuite([account_magic_tests]))

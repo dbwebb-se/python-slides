@@ -25,7 +25,6 @@
                 <li>Underlättar vid underhåll/uppdatering/refaktorering</li>
                 <li>Enhetstest, testar en enhet t ex funktion</li>
                 <li>Testprogrammet kan köras om och om igen och schemaläggas</li>
-                <li>Testprogrammet kan </li>
                 <li>Assertmetoder validerar resultatet i testmetoden </li>
             </ul>
         </div>
@@ -83,6 +82,35 @@
                 <li>Assert (then, när), validera utfallet av ditt test</li>
             </ol>
         </div>
+
+
+        <div class="slide fade-in">
+            <h1>Att skriva ett testfall BDD - exempel</h1>
+            <p><i>Givet:</i> Användarnamn och lösenord är korrekt <br>
+                <i>När:</i> Användaren anger användarnamn och lösenord och klickar på knappen “logga in” <br>
+                <i>Då:</i> Loggas användaren in
+            </p>
+            <p>Eller <i>Givet:</i> Lösenordet är inkorrekt <i>Då</i> visas ett felmeddelande</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Exempel från Yahtzee1</h1>
+            <p><i>Krav:</i> Die konstruktorn; om värdet &gt MAX_ROLL_VALUE, sätt värdet till MAX_ROLL_VALUE <br>
+                och om värdet &lt MIN_ROLL_VALUE, sätt värdet till MIN_ROLL_VALUE
+            </p>
+            <p><i>Testkrav:</i> skapa ett Die objekt med ett otillåtet värde
+            </p>
+            <p><i>Testfall:<br></i>Arrange & act: skapa ett Die objekt Die(100) och gör assertEquals med MAX_ROLL_VALUE</p>
+            <p><i>Testfall:<br></i>Arrange & act: skapa ett Die objekt Die(0) eller Die(-1) och gör assertEquals med MIN_ROLL_VALUE</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>PAUS</h1>
+    
+            <div data-time="10:00" class="timer"></div>
+        </div>    
 
     </div>
 

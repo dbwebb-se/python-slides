@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Sorting algorithm Selction sort
-Task on lecture kmom05
+Sorting algorithm Selection sort
+Task on lecture kmom06
 """
 def selection_sort(seq):
     """
-    Sorts a list with integer values with the Selction sort algorithm. O(n*n)
+    Sorts a list with integer values with the Selection sort algorithm. O(n*n)
     """
     c = 0
     for i, value1 in enumerate(seq):

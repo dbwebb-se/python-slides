@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Sorting algorithm Selction sort
-Task on lecture kmom05
+Sorting algorithm Selection sort
+Task on lecture kmom06
 """
 
 # Outer loop for current

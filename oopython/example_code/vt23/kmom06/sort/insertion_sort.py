@@ -20,21 +20,6 @@ Sorting algorithm Insertion sort
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def insertion_sort(seq):
     """
     Sorts a list with integer values with the insertion sort algorithm. O(n*n)

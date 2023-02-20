@@ -43,7 +43,7 @@ def bubble_sort_recursive(seq):
     bubble_sort_rec(seq, len(seq))
     return seq
 
-my_list = [7, 77, 2, 11, 4, 1, 13, -2, 8, 5, 33, 3, 11, 0, 22, 6, 1]
+my_list = [7, 77, 2, 11, 4, 1, 13, -2, 8, 5, 33, 3, 11, 0, 22, 6, 1, -2, 4, 2, -10]
 
 print('\n Bubblesort ')
 print(bubble_sort(my_list))

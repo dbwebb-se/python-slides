@@ -26,11 +26,11 @@ def insertion_sort(seq):
     """
     # Loop in the unsorted part, outer loop
     for index in range(1, len(seq)):
-        print("Sorted list", seq[:index])
         current_pos = index
         current_val = seq[index]
-        # Sort current into the sorted part, inner loop, backward
-        while current_pos > 0 and seq[current_pos-1] > current_val: # while j > 0 and seq[j-1] > seq[j]:
+        print("Sorted list", seq[:index], " current_val", current_val)
+        # Sort current into the sorted part, inner loop, backwards
+        while current_pos > 0 and seq[current_pos-1] > current_val:
             seq[current_pos] = seq[current_pos-1]
             current_pos -= 1
         seq[current_pos] = current_val

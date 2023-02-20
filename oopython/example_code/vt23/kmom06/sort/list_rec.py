@@ -12,4 +12,9 @@ def print_x_last_elements(list, number):
 
 my_list = [7, 2, 11, 4, 1, 8]
 
+print("Three last elements")
 print_x_last_elements(my_list, 3)
+print("All elements")
+print_x_last_elements(my_list, 6)
+print("No elements")
+print_x_last_elements(my_list, 0)

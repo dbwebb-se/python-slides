@@ -28,6 +28,6 @@ def print_colors2(bricks,index):
         print(bricks[index], end=" ") # Show the bottom one first
         
 
-print("\n\nMed listan och index")   
-print_colors2(bricks, 0)
+#print("\n\nMed listan och index")   
+#print_colors2(bricks, 0)
 

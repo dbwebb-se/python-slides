@@ -8,9 +8,9 @@ def selection_sort(seq):
     Sorts a list with integer values with the Selection sort algorithm. O(n*n)
     """
     c = 0
-    for current, value1 in enumerate(seq):
+    for current in range(len(seq)):
         min_index = current
-        for j, value2 in enumerate(seq, start=current+1):
+        for j in range(current+1, len(seq)):
             c += 1
             if seq[j] < seq[min_index]:
                 min_index = j

@@ -3,8 +3,6 @@
 Sorting algorithm Bubble sort faster
 """
 
-import time
-
 def bubble_sort_faster(seq):
     """
     Sorts a list with integer values with the bubble sort algorithm. O(n*n)
@@ -17,6 +15,4 @@ def bubble_sort_faster(seq):
 
 my_list = [7, 2, 11, 4, 1, 8]
 
-start_time = time.time()
 print(bubble_sort_faster(my_list))
-print("--- %s seconds ---" % (time.time() - start_time))

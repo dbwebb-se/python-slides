@@ -6,7 +6,6 @@ def all_vowels(str):
         return []
     res = all_vowels(str[1:])
     #print(res + [str[0]])
-    #if str[0] in ['a','o','u','e','i','y']:
     if str[0] in 'aoueiy':
         # Add the vowel to the rest of the result
         return res + [str[0]]

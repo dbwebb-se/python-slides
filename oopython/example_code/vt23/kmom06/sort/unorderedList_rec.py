@@ -20,13 +20,13 @@ class Node:
         """ Gets next node """
         return self.next
 
-    def set_data(self, newdata):
+    def set_data(self, new_data):
         """ Sets current nodes data """
-        self.data = newdata
+        self.data = new_data
 
-    def set_next(self, newnext):
+    def set_next(self, new_next):
         """ Sets next node """
-        self.next = newnext
+        self.next = new_next
 
 class UnorderedList:
     """

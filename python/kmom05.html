@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="python.css" />
 </head>
+
 <body>
     <div id="presentation" class="presentation"></div>
 
@@ -19,56 +21,9 @@
 
 
         <div class="slide fade-in">
-            <h1>Dictionaries</h1>
-            <p><code>dict</code></p>
-
-            <p>I andra programspråk kallas dictionaries ofta <code>Associative Arrays</code>, <code>Map</code> eller <code>Hash(map)</code>.
-
-        </div>
-
-
-
-        <div class="slide fade-in">
-            <h1>Dictionaries</h1>
-            <p>Gemensamt är att det alltid finns ett nyckel-värde par.</p>
-
-            <pre>courses = {
-    "python" : "Programmering och problemlösning med Python",
-    "webtec" : "Webbteknologier"
-}
-            </pre>
-        </div>
-
-
-
-        <div class="slide fade-in">
-            <h1>Dictionaries egenskaper</h1>
-            <p>
-            <ul>
-                <li>Mutable</li>
-                <li>Sorterade (från python 3.6)</li>
-                <li>Tillåter inte dubbletter</li>
-                <li>Nyckeln immutable</li>
-                <li>Värdet - vilken datatyp som helst</li>
-            </ul>
-            </p>
-        </div>
-
-
-        
-        <div class="slide fade-in">
-            <h1>Dictionaries uppgift</h1>
-            <p>Skriv ett program som frågar användaren efter ett namn och en skostorlek, och spara i en dictionary, tills användaren skriver done.</p>
-
-            <p>Programmet skriver sedan ut en sorterad lista, på sko storlek, med 'namn: skostorlek' och avslutar med medelvärdet av skostorlekarna.</p>
-
-            <div data-time="10:00" class="timer"></div>
-        </div>
-
-
-        <div class="slide fade-in">
             <h1>Tuples</h1>
-            <p><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" target="_blank">Dokumentation</a></p>
+            <p><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences"
+                    target="_blank">Dokumentation</a></p>
         </div>
 
 
@@ -89,10 +44,15 @@
 
         <div class="slide fade-in">
             <h1>Tuples uppgift</h1>
-            <p>Skriv ett program där man kan söka efter filmer. Det ska gå att söka på namn, år utgiven och regisör för filmerna. Alla filmer som matchar sökningen ska visas och vara sorterade i bokstavsordning på filmens namn. Spara data om en film tuple och spara alla tuples i en lista.
-            <br>Exempel: Om filmerna "Scott Pilgrim vs. the world" och "Baby Driver" finns i listan och man söker efter "Edgar Wright" ska båda komma upp som resultat och "Baby Driver" visas överst.</p>
+            <p>Skriv ett program där man kan söka efter filmer. Det ska gå att söka på namn, år utgiven och regisör för
+                filmerna. Alla filmer som matchar sökningen ska visas och vara sorterade i bokstavsordning på filmens
+                namn. Spara data om en film tuple och spara alla tuples i en lista.
+                <br>Exempel: Om filmerna "Scott Pilgrim vs. the world" och "Baby Driver" finns i listan och man söker
+                efter "Edgar Wright" ska båda komma upp som resultat och "Baby Driver" visas överst.
+            </p>
 
-            <p>I <code>example/lectures/2020/kmom05/movies.txt</code> finns en lista med filmer som ni kan använda för uppgiften.</p>
+            <p>I <code>example/lectures/2020/kmom05/movies.txt</code> finns en lista med filmer som ni kan använda för
+                uppgiften.</p>
 
             <div data-time="10:00" class="timer"></div>
         </div>
@@ -100,14 +60,66 @@
 
 
         <div class="slide fade-in">
+            <h1>Dictionaries</h1>
+            <p><code>dict</code></p>
+
+            <p>I andra programspråk kallas dictionaries ofta <code>Associative Arrays</code>, <code>Map</code> eller
+                <code>Hash(map)</code>.
+
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Dictionaries</h1>
+            <p>Gemensamt är att det alltid finns ett nyckel-värde par.</p>
+
+            <pre>courses = {
+                "python" : "Programmering och problemlösning med Python",
+                "webtec" : "Webbteknologier"
+            }
+                        </pre>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Dictionaries egenskaper</h1>
+            <p>
+            <ul>
+                <li>Mutable</li>
+                <li>Sorterade (från python 3.6)</li>
+                <li>Tillåter inte dubbletter</li>
+                <li>Nyckeln immutable</li>
+                <li>Värdet - vilken datatyp som helst</li>
+            </ul>
+            </p>
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Dictionaries uppgift</h1>
+            <p>Skriv ett program som frågar användaren efter ett namn och en skostorlek, och spara i en dictionary,
+                tills
+                användaren skriver done.</p>
+
+            <p>Programmet skriver sedan ut en sorterad lista, på sko storlek, med 'namn: skostorlek' och avslutar med
+                medelvärdet av skostorlekarna.</p>
+
+            <div data-time="10:00" class="timer"></div>
+        </div>
+
+
+        <div class="slide fade-in">
             <h1>Lyft exception</h1>
             <p>
-                Lyft ett exception när koden eventuellt kommer att stöta på ett scenario där exekveringen 
+                Lyft ett exception när koden eventuellt kommer att stöta på ett scenario där exekveringen
                 inte kan fortsätta.
             </p>
             <p>
-                Genom att lyfta ett exception, ett planerat avbrott i koden, så kommer det att tillåta 
-                andra delar av koden att fungera korrekt, så att exekveringen kan fortsätta.             
+                Genom att lyfta ett exception, ett planerat avbrott i koden, så kommer det att tillåta
+                andra delar av koden att fungera korrekt, så att exekveringen kan fortsätta.
             </p>
         </div>
 
@@ -119,11 +131,11 @@
             <p>
                 <code>
                     raise IndexError("List index out of range!")
-                </code> 
-                <p>eller</p>
-                <code>
+                </code>
+            <p>eller</p>
+            <code>
                     raise ValueError # short for raise ValueError()
-                </code>               
+                </code>
             </p>
         </div>
 
@@ -144,14 +156,18 @@
 
         <div class="slide fade-in">
             <h1>Praktisk problemlösning</h1>
-            <p>Marie och Andreas ska på AfterWork där de ska spela golf. Självklart måste resultatet digitaliseras i ett Python-program.</p>
+            <p>Marie och Andreas ska på AfterWork där de ska spela golf. Självklart måste resultatet digitaliseras i ett
+                Python-program.</p>
 
-            <p>Skapa ett program där en dictionary används för att spara information om spelare. Spelare kan läggas in med handicap och sedan kan resultatet på varje håll läggas in i en lista av tuples efterhand som spelet fortgår.</p>
+            <p>Skapa ett program där en dictionary används för att spara information om spelare. Spelare kan läggas in
+                med handicap och sedan kan resultatet på varje håll läggas in i en lista av tuples efterhand som spelet
+                fortgår.</p>
 
             <div data-time="20:00" class="timer"></div>
 
-    </div>
+        </div>
 
-    <script type="text/javascript" src="bundle.js"></script>
+        <script type="text/javascript" src="bundle.js"></script>
 </body>
+
 </html>

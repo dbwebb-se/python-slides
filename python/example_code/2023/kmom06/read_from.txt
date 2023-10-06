@@ -1,0 +1,5 @@
+Hej jag
+heter
+Marie och
+vi kollar på filer i python
+Så här ser åäö ut

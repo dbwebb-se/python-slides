@@ -1,7 +1,7 @@
 """
 Solve A5 in marvin1 using dictionaries
 """
-def calculate_points(point_str):
+def count_score(point_str):
     """
     Calculated points for each player
     """
@@ -13,4 +13,4 @@ def calculate_points(point_str):
     
 
 if __name__ == "__main__":
-    calculate_points("g3l1H5l2G3l1")
+    count_score("g3l1H5l2G3l1")

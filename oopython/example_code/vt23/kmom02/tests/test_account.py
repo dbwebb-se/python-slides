@@ -12,16 +12,20 @@ class TestAccount(unittest.TestCase):
     def setUp(self):
         random.seed("account")
     
-    def test_create_account_owner_ok(self):
-        """ Test owner """
+    def test_create_account_ok(self):
+        """ Test owner and name """
         my_account = Account(10000, "studiemedel", "Marie") # Arrange
         test_owner = my_account.owner # Act
         self.assertEqual(test_owner, "Marie", "Owner should be Marie") # Assert
+        self.assertEqual(my_account.name, "studiemedel", "Name should be studiemedel") # Assert
+        self.assertTrue(my_account.number >= 1000000, "Account number should be larger or equal to 1000000")
+        self.assertTrue(my_account.number <= 20000000, "Account number should be lesser or equal to 20000000")
 
-    def test_create_account_ok(self):
+    def test_create_account_isInstance_Account_ok(self):
         """ Test that instance is Account """
         my_account = Account(10000, "studiemedel", "Marie") # Arrange
         self.assertIsInstance(my_account, Account, "Instance should be Account") # Assert
+        self.assertIsNotNone(my_account, "Should not be none") # Assert
 
     def test_create_account_number_ok(self):
         """ Test that account number is set """
@@ -34,6 +38,7 @@ class TestAccount(unittest.TestCase):
         my_account = Account(10000, "studiemedel", "Marie") # Arrange
         my_charity = Account(500, "välgörenhet", "Marie") # Arrange
         self.assertNotEqual(my_charity.number, 7133616, "Number should not be 7133616") # Assert
+        self.assertNotEqual(my_charity.number, my_account.number, "Number should not be equal") # Assert
 
     def test_account_balance_ok(self):
         """ Test that account balance is set """

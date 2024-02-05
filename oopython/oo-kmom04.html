@@ -14,7 +14,7 @@
     <div id="slide-container" class="slide-container">
         <div class="slide">
             <h1>kmom04 Testning del 2</h1>
-            <p>Mer om tester och testmetoder, bland annat mockning</p>
+            <p>Mer om tester och testmetoder</p>
         </div>
 
 
@@ -90,12 +90,12 @@
                 <i>När:</i> Användaren anger användarnamn och lösenord och klickar på knappen “logga in” <br>
                 <i>Då:</i> Loggas användaren in
             </p>
-            <p>Eller <i>Givet:</i> Lösenordet är inkorrekt <i>Då</i> visas ett felmeddelande</p>
+            <p>Eller <i>Givet:</i> Lösenordet är felaktigt <i>Då</i> visas ett felmeddelande</p>
         </div>
 
 
         <div class="slide fade-in">
-            <h1>Exempel från Yahtzee1</h1>
+            <h1>Exempel, Yahtzee1 MIN_ROLL_VALUE/MAX_ROLL_VALUE</h1>
             <p><i>Krav:</i> Die konstruktorn; om värdet &gt MAX_ROLL_VALUE, sätt värdet till MAX_ROLL_VALUE <br>
                 och om värdet &lt MIN_ROLL_VALUE, sätt värdet till MIN_ROLL_VALUE
             </p>
@@ -103,6 +103,25 @@
             </p>
             <p><i>Testfall:<br></i>Arrange & act: skapa ett Die objekt Die(100) och gör assertEquals med MAX_ROLL_VALUE</p>
             <p><i>Testfall:<br></i>Arrange & act: skapa ett Die objekt Die(0) eller Die(-1) och gör assertEquals med MIN_ROLL_VALUE</p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>Exempel, Yahtzee1 skapa tärning utan argument</h1>
+            <p><i>Krav:</i> Die konstruktorn; Om man inte skickar med ett argument ska det slumpas fram ett värde till tärningen.
+            </p>
+            <p><i>Testkrav:</i> skapa ett Die objekt utan argument
+            </p>
+            <p><i>Dåligt testfall:<br></i>Arrange & act: skapa ett Die objekt Die() och assertIsInstance(Die) eller assertsNotNone()</p>
+            <p><i>Bra testfall:<br></i>Arrange & act: skapa ett Die objekt Die() och assertLessEqual med MAX_ROLL_VALUE och assertGreaterEqual med MIN_ROLL_VALUE</p>
+        </div>
+
+        <div class="slide fade-in">
+            <h1>Exempel assertIsInstance</h1>
+            <p>Antag exemplet med Yahtzeeklassen SameValueRule där klasserna Ones, Twos osv ärver från SameValueRule. Antag en lista, <i>taken_sameValueRules</i> med objekt av subklasser i SameValueRule.
+            </p>
+            <p><i>Testkrav:</i> Listan innehåller objektet <i>Ones</i>. Verifiera att ettorna är tagna.
+            </p>
+            <p><i>Testfall:<br></i>Arrange & act: skapa ett Ones objekt Die(100) och lägg i listan <i>taken_sameValueRules</i> och gör assertIsInstance(Ones), assertNotIsInstance(Twos) etc</p>
         </div>
 
 

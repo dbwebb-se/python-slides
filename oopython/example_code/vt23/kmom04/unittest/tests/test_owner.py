@@ -12,10 +12,12 @@ from src.account import Account
 class TestOwner(unittest.TestCase):
     """ Test class"""
     def setUp(self):
+        # Owner 1 with 2 accounts
         self.owner1 = Owner("Andreas", "933838339", "BTH") # Arrange
         a1 = Account(100, "räntor", self.owner1) # Arrange
         a2 = Account(35, "aktier", self.owner1) # Arrange
         self.owner1.accounts.extend([a1, a2]) # Arrange
+        # Owner 2 with 0 accounts
         self.owner2 = Owner("Marie", "999888777", "BTH") # Arrange
     
     def test_owner1_ok(self):
@@ -39,10 +41,8 @@ class TestOwner(unittest.TestCase):
         self.assertEqual(len(self.owner1.get_accounts()), 2, "No of accounts should be 2") # Assert
 
     @unittest.skip
-    def test_owner1_account_number_ok(self):
+    def test_owner1_accounts_balance_ok(self):
         """ Test that account number is set """
-        random.seed("account")
         accounts = self.owner1.get_accounts()
-        print(accounts[0].number, accounts[1].number)
-        self.assertNotEqual(accounts[0].number, 0, "Number should not be 0") # Assert
-        self.assertEqual(accounts[0].number, 7133616, "Number should be 7133616") # Assert
+        self.assertEqual(accounts[0]._balance, 100, "Number should be 100") # Assert
+        self.assertEqual(accounts[1]._balance, 35, "Number should be 35") # Assert

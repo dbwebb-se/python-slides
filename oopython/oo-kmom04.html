@@ -49,16 +49,19 @@
         
 
         <div class="slide fade-in">
-            <h1>Skillnad TDD och BDD, klass</h1>
-            <img src="img/counter.png" title="klassen Counter" style="width: 90%;padding-top:1em;">
-        </div>
-
-
-        <div class="slide fade-in">
             <h1>Skillnad TDD och BDD, testfall</h1>
+            <p>Vi har klassen <i>Counter</i> med en räknare <i>count</i> som startar på 0. 
+                Instansmetoden <i>tick()</i> räknar upp <i>count</i> med 1.</p>
             <p></p>
             <img src="img/tdd.png" title="Skillnad TDD & BDD" style="width: 49%;height:200px;">
             <img src="img/bdd.png" title="Skillnad TDD & BDD" style="width: 49%;height:200px;">
+        </div>
+
+
+
+        <div class="slide fade-in">
+            <h1>Skillnad TDD och BDD, klass</h1>
+            <img src="img/counter.png" title="klassen Counter" style="width: 90%;padding-top:1em;">
         </div>
 
 
@@ -86,6 +89,9 @@
 
         <div class="slide fade-in">
             <h1>Att skriva ett testfall BDD - exempel</h1>
+            <p><strong>Story: </strong><i>Som</i> en användare <i>Vill jag kunna</i> logga in med användarnamn och 
+                lösenord <i>Så att jag kan</i> komma åt systemet. </p>
+            <p></p>
             <p><i>Givet:</i> Användarnamn och lösenord är korrekt <br>
                 <i>När:</i> Användaren anger användarnamn och lösenord och klickar på knappen “logga in” <br>
                 <i>Då:</i> Loggas användaren in
@@ -115,13 +121,24 @@
             <p><i>Bra testfall:<br></i>Arrange & act: skapa ett Die objekt Die() och assertLessEqual med MAX_ROLL_VALUE och assertGreaterEqual med MIN_ROLL_VALUE</p>
         </div>
 
+
         <div class="slide fade-in">
             <h1>Exempel assertIsInstance</h1>
             <p>Antag exemplet med Yahtzeeklassen SameValueRule där klasserna Ones, Twos osv ärver från SameValueRule. Antag en lista, <i>taken_sameValueRules</i> med objekt av subklasser i SameValueRule.
             </p>
             <p><i>Testkrav:</i> Listan innehåller objektet <i>Ones</i>. Verifiera att ettorna är tagna.
             </p>
-            <p><i>Testfall:<br></i>Arrange & act: skapa ett Ones objekt Die(100) och lägg i listan <i>taken_sameValueRules</i> och gör assertIsInstance(Ones), assertNotIsInstance(Twos) etc</p>
+            <p><i>Testfall:<br></i>Arrange & act: skapa ett Ones objekt Ones() och lägg i listan <i>taken_sameValueRules</i> och gör assertIsInstance(Ones), assertNotIsInstance(Twos) etc</p>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Kodning</h1>
+            <h2>Del 1, enstaka testfall</h2>
+            <h2>&</h2>
+            <h2>Del 2, Testfall med exception</h2>
+            <p></p>
+            <p>Eller paus emellan</p>
         </div>
 
 
@@ -130,6 +147,52 @@
     
             <div data-time="10:00" class="timer"></div>
         </div>    
+
+
+        <div class="slide fade-in">
+            <h1>Mockning - i enhetstester</h1>
+            <ol>
+                <li>Beroende till annat som databas eller slumptal</li>
+                <li>Operativsystemberoenden</li>
+                <li>För enkelhet, du bestämmer hur omgivningen ska reagera</li>
+            </ol>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Mockning i unittest</h1>
+            <ol>
+                <li>Mock</li>
+                <li>MagicMock, subklass till Mock mer automatisk med vissa förskapade metoder.</li>
+            </ol>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Mock</h1>
+            <ol>
+                <li>self.owner2 = mock.Mock()</li>
+                <li>self.owner2.name = "Marie"</li>
+                <li>self.owner2.get_accounts = self.EmptyAccountListException</li>
+                <li>self.owner1 = mock.Mock()</li>
+                <li>self.owner1.side_effect = ["933838339", 2] # SSN and number of accounts</li>
+            </ol>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>MagicMock</h1>
+            <ol>
+                <li>m = mock.MagicMock()</li>
+                <li>m.get_ssn.side_effect = "933838339"</li>
+                <li>m.get_accounts.side_effect = 2</li>
+            </ol>
+        </div>
+
+
+        <div class="slide fade-in">
+            <h1>Kodning del 3, Mockning - överkurs</h1>
+        </div>
 
     </div>
 

@@ -117,14 +117,14 @@
             </p>
             <p><i>Testkrav:</i> skapa ett Die objekt utan argument
             </p>
-            <p><i>Dåligt testfall:<br></i>Arrange & act: skapa ett Die objekt Die() och assertIsInstance(Die) eller assertsNotNone()</p>
+            <p><i>Dåligt testfall:<br></i>Arrange & act: skapa ett Die objekt Die() och assertIsInstance(Die) eller assertNotNone()</p>
             <p><i>Bra testfall:<br></i>Arrange & act: skapa ett Die objekt Die() och assertLessEqual med MAX_ROLL_VALUE och assertGreaterEqual med MIN_ROLL_VALUE</p>
         </div>
 
 
         <div class="slide fade-in">
             <h1>Exempel assertIsInstance</h1>
-            <p>Antag exemplet med Yahtzeeklassen SameValueRule där klasserna Ones, Twos osv ärver från SameValueRule. Antag en lista, <i>taken_sameValueRules</i> med objekt av subklasser i SameValueRule.
+            <p>Antag exemplet med Yahtzeeklassen SameValueRule där klasserna Ones, Twos osv ärver från SameValueRule. Antag en lista, <i>taken_sameValueRules</i> med objekt av SameValueRule.
             </p>
             <p><i>Testkrav:</i> Listan innehåller objektet <i>Ones</i>. Verifiera att ettorna är tagna.
             </p>
@@ -175,6 +175,7 @@
                 <li>self.owner2.name = "Marie"</li>
                 <li>self.owner2.get_accounts = self.EmptyAccountListException</li>
                 <li>self.owner1 = mock.Mock()</li>
+                <li>self.owner1.name = "Andreas"</li>
                 <li>self.owner1.side_effect = ["933838339", 2] # SSN and number of accounts</li>
             </ol>
         </div>

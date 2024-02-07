@@ -4,7 +4,6 @@ Class for testing the Owner class with mock
 """
 import unittest
 from unittest import mock
-import random
 
 from src.owner import Owner
 from src.empty_list_exception import EmptyAccountListException
@@ -40,7 +39,3 @@ class TestOwnerMock2(unittest.TestCase):
         self.assertNotEqual(accounts[1].number, 7133616)
         self.assertEqual(accounts[1].number, 7777777)
 
-    def test_owner2_EmptyAccountListException(self):
-        """ Test that owner2 gets EmptyAccountListException since no accounts """
-        with self.assertRaises(EmptyAccountListException) as _:
-            self.owner2.get_accounts()

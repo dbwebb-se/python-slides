@@ -4,7 +4,6 @@ Class for testing the Owner class with mock
 """
 import unittest
 from unittest import mock
-import random
 
 from src.owner import Owner
 from src.empty_list_exception import EmptyAccountListException

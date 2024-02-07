@@ -3,7 +3,6 @@
 Class for testing the Owner class
 """
 import unittest
-import random
 
 from src.owner import Owner
 from src.empty_list_exception import EmptyAccountListException
@@ -43,6 +42,7 @@ class TestOwner(unittest.TestCase):
     @unittest.skip
     def test_owner1_accounts_balance_ok(self):
         """ Test that account number is set """
+        self.skipTest("Another way to skip this test")
         accounts = self.owner1.get_accounts()
         self.assertEqual(accounts[0]._balance, 100, "Number should be 100") # Assert
         self.assertEqual(accounts[1]._balance, 35, "Number should be 35") # Assert

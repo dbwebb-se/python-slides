@@ -1,142 +1,197 @@
 <!doctype html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>oopython - kmom05</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>oopython - kmom05</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div id="presentation" class="presentation"></div>
+  <div id="presentation" class="presentation"></div>
 
-    <div id="slide-container" class="slide-container">
-        <div class="slide">
-            <h1>kmom05 - Algoritmanalys</h1>
-            <p>Problem</p>
-            <p>Lösningar</p>
-            <p>Vilken är bäst?</p>
-        </div>
-
-        <div class="slide">
-            <h1>Problem</h1>
-        </div>
-
-        <div class="slide">
-            <h1>Komma in till stan</h1>
-
-            <p>Åka buss 1?</p>
-            <p>Gå till Bergåsa? Och sen någon buss eller tåg?</p>
-            <p>Ta bilen?</p>
-        </div>
-
-        <div class="slide">
-            <h1>Räkna personer</h1>
-
-            <p>Kan vi göra det på olika sätt?</p>
-        </div>
-
-        <div class="slide">
-            <h1>Dela upp problemet</h1>
-
-            <p>Vi har sagt det genom hela utbildningen.</p>
-            <p>Gäller det även när en dator ska lösa problemet?</p>
-        </div>
-
-        <div class="slide">
-            <h1>Hur mäter vi snabbhet?</h1>
-
-            <p>Vad är det vi vill mäta?</p>
-        </div>
-
-        <div class="slide">
-            <h1>Modell</h1>
-
-            <p>Sekventiell</p>
-            <p>Simpla instruktioner <code>+, -, *, /, =</code></p>
-            <p>Alla instruktioner tar 1 tidsenhet.</p>
-            <p>Inte perfekt modell, men tillräckligt bra.</p>
-        </div>
-        
-        <div class="slide">
-            <h1>big-O</h1>
-            <p>Hur snabbt växer exekveringstiden när N blir stort</p>
-        </div>
-
-
-
-        <div class="slide">
-            <h1>Olika växtrater</h1>
-            <style type="text/css">
-            .tg  {border-collapse:collapse;border-spacing:0;}
-            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-              overflow:hidden;padding:10px 5px;word-break:normal;}
-            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-            .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-            </style>
-            <table class="tg" style="display:inline-block">
-            <thead>
-              <tr>
-                <th class="tg-c3ow"><p><b>Big O</b></P><br></th>
-                <th class="tg-c3ow"><p><b>Complexity</b></P><br></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="tg-c3ow"><p>O(1)</P><br></td>
-                <td class="tg-c3ow"><p>Constant</P><br></td>
-              </tr>
-              <tr>
-                <td class="tg-c3ow"><p>O(n)</td>
-                <td class="tg-c3ow"><p>Linear</td>
-              </tr>
-              <tr>
-                <td class="tg-c3ow"><p>O(n^2)</P><br></td>
-                <td class="tg-c3ow"><p>Quadratic</P><br></td>
-              </tr>
-              <tr>
-                <td class="tg-c3ow"><p>O(2^n)</P><br></td>
-                <td class="tg-c3ow"><p>Exponential</td>
-              </tr>
-              <tr>
-                <td class="tg-c3ow"><p>O(log n)</P><br></td>
-                <td class="tg-c3ow"><p>Logarithmic</P></td>
-              </tr>
-            </tbody>
-            </table>
-            <img style="display:inline-block" src="https://miro.medium.com/max/700/1*5ZLci3SuR0zM_QlZOADv8Q.jpeg">
-        </div>
-
-        <div class="slide">
-            <h1>Ett problem</h1>
-
-            <p>Vi har en lista med N stycken heltal.<br>
-                Bestäm det K största talet.</p>
-
-            <p>Tips:</p>
-
-            <pre><code>n = 10000000
-random_list = random.sample(range(n * 10), n)</code></pre>
-
-            <div data-time="10:00" class="timer"></div>
-        </div>
-
-
-
-        <div class="slide">
-            <h1>QuickSort</h1>
-            <img src="https://files.realpython.com/media/Python_Sorting_Algorithms_-_Quick_Sort.ee6dbe24f0d3.jpeg " alt="">
-        </div>
-
-        <div class="slide">
-            <h1>Algoritmanalys för en webbare</h1>
-
-            <p><em>Men Andreas vad ska vi med detta?</em></p>
-        </div>
+  <div id="slide-container" class="slide-container">
+    <div class="slide">
+      <h1>kmom06 - Algoritmanalys</h1>
+      <p>Problem</p>
+      <p>Lösningar</p>
+      <p>Vilken är bäst?</p>
     </div>
 
-    <script type="text/javascript" src="slider.js"></script>
+    <div class="slide">
+      <h1>Problem</h1>
+    </div>
+
+    <div class="slide">
+      <h1>Komma in till stan</h1>
+
+      <p>Åka buss 1?</p>
+      <p>Gå till Bergåsa? Och sen någon buss eller tåg?</p>
+      <p>Ta bilen?</p>
+    </div>
+
+    <div class="slide">
+      <h1>Räkna personer</h1>
+
+      <p>Kan vi göra det på olika sätt?</p>
+    </div>
+
+    <div class="slide">
+      <h1>Dela upp problemet</h1>
+
+      <p>Vi har sagt det genom hela utbildningen.</p>
+      <p>Gäller det även när en dator ska lösa problemet?</p>
+    </div>
+
+    <div class="slide">
+      <h1>Hur mäter vi snabbhet?</h1>
+
+      <p>Vad är det vi vill mäta?</p>
+    </div>
+
+    <div class="slide">
+      <h1>Modell</h1>
+
+      <p>Sekventiell</p>
+      <p>Simpla instruktioner <code>+, -, *, /, =</code></p>
+      <p>Alla instruktioner tar 1 tidsenhet.</p>
+      <p>Inte perfekt modell, men tillräckligt bra.</p>
+    </div>
+
+    <div class="slide">
+      <h1>big-O</h1>
+      <p>Hur snabbt växer exekveringstiden när N (input mängd) gå mot oändligheten</p>
+      <p>Visualiseras som "O(n)"</p>
+    </div>
+
+
+
+    <div class="slide">
+      <h1>Olika växtrater</h1>
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg th {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg .tg-c3ow {
+          border-color: inherit;
+          text-align: center;
+          vertical-align: top
+        }
+      </style>
+      <table class="tg" style="display:inline-block">
+        <thead>
+          <tr>
+            <th class="tg-c3ow">
+              <p><b>Big O</b></P><br>
+            </th>
+            <th class="tg-c3ow">
+              <p><b>Complexity</b></P><br>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-c3ow">
+              <p>O(1)</P><br>
+            </td>
+            <td class="tg-c3ow">
+              <p>Constant</P><br>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow">
+              <p>O(n)
+            </td>
+            <td class="tg-c3ow">
+              <p>Linear
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow">
+              <p>O(n^2)</P><br>
+            </td>
+            <td class="tg-c3ow">
+              <p>Quadratic</P><br>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow">
+              <p>O(2^n)</P><br>
+            </td>
+            <td class="tg-c3ow">
+              <p>Exponential
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-c3ow">
+              <p>O(log n)</P><br>
+            </td>
+            <td class="tg-c3ow">
+              <p>Logarithmic</P>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <img style="display:inline-block" src="https://miro.medium.com/max/700/1*5ZLci3SuR0zM_QlZOADv8Q.jpeg">
+    </div>
+
+    <div class="slide">
+      <h1>Ett problem</h1>
+
+      <p>Vi har en lista med N stycken heltal.<br>
+        Bestäm det K största talet.</p>
+
+      <p>Tips:</p>
+
+      <pre><code>n = 10000000
+random_list = random.sample(range(n * 10), n)</code></pre>
+
+      <div data-time="10:00" class="timer"></div>
+    </div>
+
+
+
+    <div class="slide">
+      <h1>QuickSort</h1>
+      <img src="https://files.realpython.com/media/Python_Sorting_Algorithms_-_Quick_Sort.ee6dbe24f0d3.jpeg " alt="">
+    </div>
+
+    <div class="slide">
+      <h1>Algoritmanalys för en webbare</h1>
+
+      <p><em>Men Andreas vad ska vi med detta?</em></p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="slider.js"></script>
 </body>
+
 </html>

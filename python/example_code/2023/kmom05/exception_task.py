@@ -1,6 +1,7 @@
 """
 shoe assignment. calc average show size
 """
+from operator import itemgetter
 
 def check_size(shoe_size):
     """
@@ -19,16 +20,16 @@ def get_data():
     Get names and sizes from user
     """
     data = {}
-    choice = input("Enter 'name, shoesize':")
+    choice = input("Enter 'name, shoe size': ")
     while choice != "done":
         try:
             name, size = choice.split(", ")
             data[name] = check_size(size)
-        except ValueError as e:
-            print(type(e))
-            print(e.args)
+        except ValueError as shoe_error:
+            print(type(shoe_error))
+            print(shoe_error.args)
             print("You must enter a number for shoe size")
-        choice = input("Enter 'name, shoesize':")
+        choice = input("Enter 'name, shoe size': ")
     return data
 
 def print_data(data):
@@ -36,7 +37,9 @@ def print_data(data):
     calc average and print data
     """
     tot = 0
-    for name, size in data.items():
+    print("Namn och skostorlek")
+    sorted_data = sorted(data.items(), key=itemgetter(1))
+    for name, size in sorted_data:
         print(f"{name}: {size}")
         tot += size
     print(f"average size is {tot/len(data)}")
@@ -44,5 +47,3 @@ def print_data(data):
 if __name__ == "__main__":
     name_size = get_data()
     print_data(name_size)
-
-    raise SystemExit("program exited")

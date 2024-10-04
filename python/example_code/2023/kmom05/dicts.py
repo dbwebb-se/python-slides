@@ -5,7 +5,7 @@ from operator import itemgetter
 
 def id_to_key(id_, warehouse):
     """
-    match key from prices to id in warehous and return key and data.
+    match key from prices to id in warehouse and return key and data.
     """
     for key_, data in warehouse.items():
         if id_ == data["ids"][0]:

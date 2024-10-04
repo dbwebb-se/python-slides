@@ -156,17 +156,44 @@
 
         <div class="slide fade-in">
             <h1>Praktisk problemlösning</h1>
-            <p>Marie och Andreas ska på AfterWork där de ska spela golf. Självklart måste resultatet digitaliseras i ett
-                Python-program.</p>
+            <p>Skapa ett program åt ett företag där programmet ska räkna ut snittlönen för varje avdelning samt hur
+                många timmar som har jobbats.</p>
 
-            <p>Skapa ett program där en dictionary används för att spara information om spelare. Spelare kan läggas in
-                med handicap och sedan kan resultatet på varje håll läggas in i en lista av tuples efterhand som spelet
-                fortgår.</p>
+            <p>Som input har du tre olika listor med tupler. En lista med anställda och deras avdelning. En lista med
+                anställda och deras lön. En lista med namn och antalet timmar de har jobbat.</p>
 
-            <div data-time="20:00" class="timer"></div>
+            <pre><code>employees_departments = [
+    ("Alice", "HR"),
+    ("Bob", "Engineering"),
+    ("Charlie", "HR"),
+    ("David", "Engineering"),
+    ("Eve", "Marketing"),
+    ("Frank", "Marketing"),
+    ("Grace", "Engineering")
+]
 
+employees_salaries = [
+    ("Alice", 50000),
+    ("Bob", 75000),
+    ("Charlie", 52000),
+    ("David", 80000),
+    ("Eve", 60000),
+    ("Frank", 62000),
+    ("Grace", 78000)
+]
+
+employees_hours = [
+    ("Alice", 120),
+    ("Bob", 150),
+    ("Charlie", 130),
+    ("David", 160),
+    ("Eve", 140),
+    ("Frank", 135),
+    ("Grace", 155)
+]
+        </code></pre>
+            <!-- <div data-time="20:00" class="timer"></div> -->
         </div>
-
         <script type="text/javascript" src="bundle.js"></script>
 </body>
 

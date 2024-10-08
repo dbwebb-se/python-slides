@@ -159,10 +159,10 @@
             <p>Skapa ett program åt ett företag där programmet ska räkna ut snittlönen för varje avdelning samt hur
                 många timmar som har jobbats.</p>
 
-            <p>Som input har du tre olika listor med tupler. En lista med anställda och deras avdelning. En lista med
-                anställda och deras lön. En lista med namn och antalet timmar de har jobbat.</p>
+            <p>Som input har du en dict och en tuple. Tuplen innehåller vilken avdelning de anställda jobbar på.
+                Dictionarien innehåller information om deras lön och hur många timmar de har jobbat.</p>
 
-            <pre><code>employees_departments = [
+            <pre><code>employees_departments = (
     ("Alice", "HR"),
     ("Bob", "Engineering"),
     ("Charlie", "HR"),
@@ -170,27 +170,18 @@
     ("Eve", "Marketing"),
     ("Frank", "Marketing"),
     ("Grace", "Engineering")
-]
+)
+    
+employees_salaries_hours = {
+    "Alice": { "salary": 50000, "hours": 120},
+    "Bob": { "salary": 75000, "hours": 150},
+    "Charlie": { "salary": 52000, "hours": 130},
+    "David": { "salary": 80000, "hours": 160},
+    "Eve": { "salary": 60000, "hours": 140},
+    "Frank": { "salary": 62000, "hours": 135},
+    "Grace": { "salary": 78000, "hours": 155}
+}
 
-employees_salaries = [
-    ("Alice", 50000),
-    ("Bob", 75000),
-    ("Charlie", 52000),
-    ("David", 80000),
-    ("Eve", 60000),
-    ("Frank", 62000),
-    ("Grace", 78000)
-]
-
-employees_hours = [
-    ("Alice", 120),
-    ("Bob", 150),
-    ("Charlie", 130),
-    ("David", 160),
-    ("Eve", 140),
-    ("Frank", 135),
-    ("Grace", 155)
-]
         </code></pre>
             <!-- <div data-time="20:00" class="timer"></div> -->
         </div>

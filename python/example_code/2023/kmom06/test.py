@@ -1,0 +1,7 @@
+"""
+Reads from file
+"""
+
+
+    
+

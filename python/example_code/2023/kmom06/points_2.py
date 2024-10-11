@@ -17,4 +17,4 @@ def count_score(point_str):
     
 
 if __name__ == "__main__":
-    count_score("g3l1H5l2G3l1")
+    count_score("a2b4A5s3B1")

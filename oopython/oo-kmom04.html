@@ -46,7 +46,13 @@
                 cykel tills produkten är klar.
             </p>
         </div>
-        
+
+
+        <div class="slide fade-in">
+            <h1>Skillnad TDD och BDD, klass</h1>
+            <img src="img/counter.png" title="klassen Counter" style="width: 90%;padding-top:1em;">
+        </div>
+
 
         <div class="slide fade-in">
             <h1>Skillnad TDD och BDD, testfall</h1>
@@ -55,13 +61,6 @@
             <p></p>
             <img src="img/tdd.png" title="Skillnad TDD & BDD" style="width: 49%;height:200px;">
             <img src="img/bdd.png" title="Skillnad TDD & BDD" style="width: 49%;height:200px;">
-        </div>
-
-
-
-        <div class="slide fade-in">
-            <h1>Skillnad TDD och BDD, klass</h1>
-            <img src="img/counter.png" title="klassen Counter" style="width: 90%;padding-top:1em;">
         </div>
 
 
@@ -137,8 +136,6 @@
             <h2>Del 1, enstaka testfall</h2>
             <h2>&</h2>
             <h2>Del 2, Testfall med exception</h2>
-            <p></p>
-            <p>Eller paus emellan</p>
         </div>
 
 
@@ -173,7 +170,7 @@
             <ol>
                 <li>self.owner2 = mock.Mock()</li>
                 <li>self.owner2.name = "Marie"</li>
-                <li>self.owner2.get_accounts = self.EmptyAccountListException</li>
+                <li>self.owner2.get_accounts.side_effect = EmptyAccountListException</li>
                 <li>self.owner1 = mock.Mock()</li>
                 <li>self.owner1.name = "Andreas"</li>
                 <li>self.owner1.side_effect = ["933838339", 2] # SSN and number of accounts</li>
